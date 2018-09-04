@@ -1,7 +1,7 @@
 
-**** 09/03/18 20:44:58 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 09/04/18 21:17:39 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\KC_Input_VAS_Spice-PSpiceFil
+ ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
 
 
  ****     CIRCUIT DESCRIPTION
@@ -31,30 +31,70 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source KC_INPUT_VAS_SPICE
-R_R1         N00464 N00446  1k TC=0,0 
-R_R2         N00472 N00446  1k TC=0,0 
+R_R1         N00464 N00448  1k TC=0,0 
+R_R2         N00472 N00448  1k TC=0,0 
 R_R3         N00286 N00484  10 TC=0,0 
 R_R4         N00286 N00488  10 TC=0,0 
 R_R5         N00274 0  10k TC=0,0 
-R_R6         N00282 N00321  150 TC=0,0 
+R_R6         N00282 N00321  100 TC=0,0 
 Q_Q1         N00286 N00274 N00282 Q2SC1815
 Q_Q2         N00274 N00282 N00321 Q2SC1815
-V_V1         0 N00321 DC 25v  
-V_V2         N00446 0 DC 25v  
-X_U1         N00464 N00598 N00484 N00488 0 N00472 MAT02 
+V_V1         0 N00321 DC 30v  
+V_V2         N00448 0 DC 30v  
+X_U1         N00464 N00598 N00484 N00488 N00628 N00472 MAT02 
 V_V3         N00598 0  AC 0
-+SIN 0 0.01 1K 0 0 0
-Q_Q3         N00446 N00472 N01376 Q2SC1815
-Q_Q4         N00446 N00464 N01372 Q2SC1815
-I_I1         N01376 0 DC 0.001Adc  
-I_I2         N01372 0 DC 0.001Adc  
++SIN 0 0.001 1K 0 0 0
+Q_Q3         N00448 N00472 N01376 Q2SC1815
+Q_Q4         N00448 N00464 N01372 Q2SC1815
+I_I1         N01376 0 DC 0.0005Adc  
+I_I2         N01372 0 DC 0.0005Adc  
+Q_Q5         N02506 N02056 N02070 Q2SC3429 
+Q_Q6         N02728 N02056 N02083 Q2SC3429 
+R_R7         N00321 N02070  200 TC=0,0 
+R_R8         N00321 N02083  200 TC=0,0 
+R_R9         N02056 N02070  2k TC=0,0 
+R_R10         N02709 N02345  10 TC=0,0 
+R_R11         N02713 N02345  10 TC=0,0 
+R_R12         N02345 N00448  100 TC=0,0 
+Q_Q7         N02056 N02518 N02506 Q2SA1015
+R_R13         N02518 0  2k TC=0,0 
+Q_Q8         N02506 N01376 N02709 Q2SA921
+Q_Q9         N02728 N01372 N02713 Q2SA921
+Q_Q12         N04661 N04469 N04503 Q2SC3429 
+R_R17         N04749 N04597  10 TC=0,0 
+Q_Q15         N04661 N04329 N04749 Q2SA921
+Q_Q16         N04773 N04323 N04755 Q2SA921
+R_R15         N04513 N04517  200 TC=0,0 
+R_R19         N04597 N04303  100 TC=0,0 
+R_R16         N04469 N04503  2k TC=0,0 
+R_R18         N04755 N04597  10 TC=0,0 
+Q_Q10         N04303 N05703 N04329 Q2SC1815
+Q_Q14         N04469 N04669 N04661 Q2SA1015
+Q_Q13         N04773 N04469 N04517 Q2SC3429 
+R_R14         N04513 N04503  200 TC=0,0 
+R_R20         N04669 0  2k TC=0,0 
+I_I4         N04323 0 DC 0.005Adc  
+I_I3         N04329 0 DC 0.005Adc  
+Q_Q11         N04303 N05223 N04323 Q2SC1815
+V_V4         N04303 0 DC 25v  
+V_V5         0 N04513 DC 25v  
+V_V8         N05703 0  AC 0
++SIN 20 0.01 1K 0 0 0
+V_V9         N05223 0  AC 0
++SIN 20 0.01 1K 0 0 180
+R_R21         N04773 0  50 TC=0,0 
+D_D1         0 N04661 D1N4154_1 
+R_R22         N02728 0  50 TC=0,0 
+D_D2         0 N02506 D1N4154_1 
+V_V6         N00628 0  AC 0
++SIN 0 0.001 1K 0 0 180
 
 **** RESUMING Transient.cir ****
 .END
 
-**** 09/03/18 20:44:58 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 09/04/18 21:17:39 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\KC_Input_VAS_Spice-PSpiceFil
+ ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
 
 
  ****     Diode MODEL PARAMETERS
@@ -65,16 +105,23 @@ I_I2         N01372 0 DC 0.001Adc
 
 
 
-               X_U1.DMAT1      X_U1.DMAT2      
-          IS  200.000000E-18   10.000000E-15 
-          RS   20                            
-         CJO                   40.000000E-12 
-          VJ                     .6          
+               D1N4154_1       X_U1.DMAT1      X_U1.DMAT2      
+          IS  153.400000E-12  200.000000E-18   10.000000E-15 
+           N    1.487                                        
+         ISR    4.763000E-09                                 
+         IKF    3.530000E-03                                 
+          BV   35                                            
+         IBV    5.000000E-06                                 
+          RS     .6329         20                            
+          TT    5.771000E-09                                 
+         CJO    2.251000E-12                   40.000000E-12 
+          VJ     .5                              .6          
+           M     .1575                                       
 
 
-**** 09/03/18 20:44:58 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 09/04/18 21:17:39 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\KC_Input_VAS_Spice-PSpiceFil
+ ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
 
 
  ****     BJT MODEL PARAMETERS
@@ -85,51 +132,83 @@ I_I2         N01372 0 DC 0.001Adc
 
 
 
-               Q2SC1815        X_U1.NMAT       
-               NPN             NPN             
-       LEVEL    1               1            
-          IS  639.500000E-18  600.000000E-15 
-          BF  149.9           500            
-          NF    1               1            
-         VAF  172.5           150            
-         IKF     .8587           .3          
-         ISE  750.100000E-18                 
-          NE    1.47                         
-          BR    6.575            .5          
-          NR    1               1            
-         VAR  100               7            
-         IKR     .4534                       
-         ISC    4.653000E-15                 
-          NC    1.185                        
-          NK     .5413                       
-         ISS    0               0            
-          RB                   13            
-          RE    0                .3          
-          RC     .7972         10            
-         CJE    5.000000E-12   82.000000E-12 
-         VJE     .75             .7          
-         MJE     .3333           .4          
-         CJC    4.858000E-12   33.000000E-12 
-         VJC     .75             .55         
-         MJC     .3333           .5          
-        XCJC    1               1            
-         CJS    0               0            
-         VJS     .75             .75         
-          TF  314.300000E-12  300.000000E-12 
-         VTF   10                            
-         ITF   13.01                         
-         PTF                   25            
-          TR   10.000000E-09    5.000000E-09 
-         XTB    1.5                          
-          KF    0               0            
-          AF    1               1            
-          CN    2.42            2.42         
-           D     .87             .87         
+               Q2SC1815        Q2SC3429        Q2SA1015        Q2SA921         
+               NPN             NPN             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS  639.500000E-18   10.000000E-15    2.040000E-15  930.900000E-15 
+          BF  149.9            87.718         183             460.5          
+          NF    1               1               1               1            
+         VAF  172.5           100             100             100            
+         IKF     .8587           .73698         1.5              .153        
+         ISE  750.100000E-18  100.490000E-15    2.140000E-15  950.500000E-15 
+          NE    1.47            1.4474          1.465           1.483        
+          BR    6.575           1              10.97            1            
+          NR    1               1               1               1            
+         VAR  100             100             100             100            
+         IKR     .4534           .01             .02637         4.548        
+         ISC    4.653000E-15                    2.619000E-15    2.492000E-12 
+          NC    1.185                           1.707           1.09         
+          NK     .5413                          1.319                        
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC     .7972          0                .5             3.154        
+         CJE    5.000000E-12    2.000000E-12    5.000000E-12    5.000000E-12 
+         VJE     .75             .75             .75             .75         
+         MJE     .3333                           .3333           .3333       
+         CJC    4.858000E-12    1.114800E-12    9.716000E-12    4.990000E-12 
+         VJC     .75             .35             .75             .3905       
+         MJC     .3333           .15702          .3333           .3094       
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF  314.300000E-12   26.430000E-12  452.400000E-12  945.700000E-12 
+         XTF                   10                              36.930000E+03 
+         VTF   10              10              10              10            
+         ITF   13.01            1               5               7.075        
+          TR   10.000000E-09   10.000000E-09   10.000000E-09   10.000000E-09 
+         XTB    1.5             1.5             1.5             1.5          
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.2             2.2          
+           D     .87             .87             .52             .52         
+
+
+               X_U1.NMAT       
+               NPN             
+       LEVEL    1            
+          IS  600.000000E-15 
+          BF  500            
+          NF    1            
+         VAF  150            
+         IKF     .3          
+          BR     .5          
+          NR    1            
+         VAR    7            
+         ISS    0            
+          RB   13            
+          RE     .3          
+          RC   10            
+         CJE   82.000000E-12 
+         VJE     .7          
+         MJE     .4          
+         CJC   33.000000E-12 
+         VJC     .55         
+         MJC     .5          
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  300.000000E-12 
+         PTF   25            
+          TR    5.000000E-09 
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
 
 
-**** 09/03/18 20:44:58 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 09/04/18 21:17:39 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\KC_Input_VAS_Spice-PSpiceFil
+ ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -142,13 +221,25 @@ I_I2         N01372 0 DC 0.001Adc
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00274)  -23.4870 (N00282)  -24.2520 (N00286)    -.5969 (N00321)  -25.0000     
+(N00274)  -28.4720 (N00282)  -29.2470 (N00286)    -.6201 (N00321)  -30.0000     
 
-(N00446)   25.0000 (N00464)   22.5110 (N00472)   22.5110 (N00484)    -.5720     
+(N00448)   30.0000 (N00464)   26.2510 (N00472)   26.2510 (N00484)    -.5826     
 
-(N00488)    -.5720 (N00598)    0.0000 (N01372)   21.7850 (N01376)   21.7850     
+(N00488)    -.5826 (N00598)    0.0000 (N00628) 122.5E-21 (N01372)   25.5460     
 
-(X_U1.4)    -.2712 
+(N01376)   25.5460 (N02056)  -25.6640 (N02070)  -26.3870 (N02083)  -26.3880     
+
+(N02345)   26.3390 (N02506)     .6895 (N02518)     .0068 (N02709)   26.1560     
+
+(N02713)   26.1550 (N02728)     .0202 (N04303)   25.0000 (N04323)   19.2330     
+
+(N04329)   19.2330 (N04469)  -19.4330 (N04503)  -20.1660 (N04513)  -25.0000     
+
+(N04517)  -20.1660 (N04597)   20.0980 (N04661)     .6976 (N04669)     .0086     
+
+(N04749)   19.8530 (N04755)   19.8520 (N04773)     .0279 (N05223)   20.0000     
+
+(N05703)   20.0000 (X_U1.4)    -.2778 
 
 
 
@@ -156,19 +247,24 @@ I_I2         N01372 0 DC 0.001Adc
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_V1        -7.322E-03
-    V_V2        -6.964E-03
-    V_V3        -4.682E-06
+    V_V1        -4.647E-02
+    V_V2        -4.502E-02
+    V_V3        -6.941E-06
+    V_V4        -5.884E-02
+    V_V5        -4.834E-02
+    V_V8        -3.268E-05
+    V_V9        -3.268E-05
+    V_V6        -6.941E-06
 
-    TOTAL POWER DISSIPATION   3.57E-01  WATTS
+    TOTAL POWER DISSIPATION   5.43E+00  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 09/03/18 20:44:58 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 09/04/18 21:17:39 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\KC_Input_VAS_Spice-PSpiceFil
+ ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
 
 
  ****     JOB STATISTICS SUMMARY
@@ -178,5 +274,5 @@ I_I2         N01372 0 DC 0.001Adc
 
 
 
-  Total job time (using Solver 1)   =         .02
+  Total job time (using Solver 1)   =         .03
 
