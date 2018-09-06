@@ -31,9 +31,28 @@
       (Sort User)))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VAC
+      (FullPartName "VAC.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
     (0
       (LibraryName
          "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (MAT02
+      (FullPartName "MAT02.Normal")
+      (LibraryName "D:\DEVELOPWORKSPACE\GITHUB\ORCAD_LIB\PSPICE\MAT02.OLB")
+      (DeviceIndex "0"))
+    (Q2SC1815
+      (FullPartName "Q2SC1815.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\JBIPOLAR.OLB")
       (DeviceIndex "0"))
     (1N4154
       (FullPartName "1N4154.Normal")
@@ -44,11 +63,6 @@
       (FullPartName "R.Normal")
       (LibraryName
          "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
-      (DeviceIndex "0"))
-    (VSIN
-      (FullPartName "VSIN.Normal")
-      (LibraryName
-         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
     (Q2SA921
       (FullPartName "Q2SA921.Normal")
@@ -70,20 +84,6 @@
       (LibraryName
          "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
-    (Q2SC1815
-      (FullPartName "Q2SC1815.Normal")
-      (LibraryName
-         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\JBIPOLAR.OLB")
-      (DeviceIndex "0"))
-    (MAT02
-      (FullPartName "MAT02.Normal")
-      (LibraryName "D:\DEVELOPWORKSPACE\GITHUB\ORCAD_LIB\PSPICE\MAT02.OLB")
-      (DeviceIndex "0"))
-    (VAC
-      (FullPartName "VAC.Normal")
-      (LibraryName
-         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
     (VSRC
       (FullPartName "VSRC.Normal")
       (LibraryName
@@ -97,14 +97,13 @@
          "D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice.dsn")
       (Path "Design Resources"
          "D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice.dsn"
-         "SCHEMATIC1")
+         "Design Cache")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
-      (Path "PSpice Resources" "Simulation Profiles")
       (Select "Design Resources"
          "D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice.dsn"
-         "SCHEMATIC1" "VAS_Only"))
+         "Design Cache" "MAT02"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -114,9 +113,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 25 1322 163 733")
-        (Scroll "-89 -7")
-        (Zoom "108")
+        (Placement "44 0 1 -1 -1 -8 -30 25 1322 163 733")
+        (Scroll "-139 0")
+        (Zoom "100")
         (Occurrence "/"))
       (Path
          "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\KCINPUT_VAS\PSPICE\KC_INPUT_VAS_SPICE.DSN")
@@ -126,10 +125,21 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 75 1376 75 649")
-        (Scroll "609 302")
-        (Zoom "216")
+        (Scroll "-102 0")
+        (Zoom "108")
         (Occurrence "/"))
       (Path
          "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\KCINPUT_VAS\PSPICE\KC_INPUT_VAS_SPICE.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "VAS_Only"))))
+      (Page "VAS_Only"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 100 1401 100 674")
+        (Scroll "-128 -8")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\KCINPUT_VAS\PSPICE\KC_INPUT_VAS_SPICE.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "InputStageOnly"))))

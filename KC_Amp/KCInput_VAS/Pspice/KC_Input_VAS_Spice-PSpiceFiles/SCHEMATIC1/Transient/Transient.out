@@ -1,5 +1,5 @@
 
-**** 09/04/18 21:17:39 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 09/06/18 17:02:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
 
@@ -32,19 +32,19 @@
 **** INCLUDING SCHEMATIC1.net ****
 * source KC_INPUT_VAS_SPICE
 R_R1         N00464 N00448  1k TC=0,0 
-R_R2         N00472 N00448  1k TC=0,0 
-R_R3         N00286 N00484  10 TC=0,0 
-R_R4         N00286 N00488  10 TC=0,0 
+R_R2         N01334 N00448  1k TC=0,0 
+R_R3         N00286 N00484  1k TC=0,0 
+R_R4         N00286 N00488  1k TC=0,0 
 R_R5         N00274 0  10k TC=0,0 
 R_R6         N00282 N00321  100 TC=0,0 
 Q_Q1         N00286 N00274 N00282 Q2SC1815
 Q_Q2         N00274 N00282 N00321 Q2SC1815
 V_V1         0 N00321 DC 30v  
 V_V2         N00448 0 DC 30v  
-X_U1         N00464 N00598 N00484 N00488 N00628 N00472 MAT02 
+X_U1         N00464 N00598 N00484 N00488 N00628 N01334 MAT02 
 V_V3         N00598 0  AC 0
-+SIN 0 0.001 1K 0 0 0
-Q_Q3         N00448 N00472 N01376 Q2SC1815
++SIN 0 0.01 1K 0 0 0
+Q_Q3         N00448 N01334 N01376 Q2SC1815
 Q_Q4         N00448 N00464 N01372 Q2SC1815
 I_I1         N01376 0 DC 0.0005Adc  
 I_I2         N01372 0 DC 0.0005Adc  
@@ -87,12 +87,27 @@ D_D1         0 N04661 D1N4154_1
 R_R22         N02728 0  50 TC=0,0 
 D_D2         0 N02506 D1N4154_1 
 V_V6         N00628 0  AC 0
-+SIN 0 0.001 1K 0 0 180
++SIN 0 0.01 1K 0 0 180
+R_R28         N13280 N13318  150 TC=0,0 
+V_V12         N13470 0  AC 0
++SIN 0 0.01 1K 0 0 180
+R_R27         N13272 0  10k TC=0,0 
+R_R23         N13416 N13406  100 TC=0,0 
+Q_Q18         N13272 N13280 N13318 Q2SC1815
+V_V11         N13456 0  AC 0
++SIN 0 0.01 1K 0 0 0
+R_R24         N13634 N13406  100 TC=0,0 
+Q_Q17         N13286 N13272 N13280 Q2SC1815
+V_V10         N13406 0 DC 30v  
+X_U2         N13416 N13456 N13422 N13428 N13470 N13634 MAT02 
+V_V7         0 N13318 DC 30v  
+R_R25         N13286 N13422  20 TC=0,0 
+R_R26         N13286 N13428  20 TC=0,0 
 
 **** RESUMING Transient.cir ****
 .END
 
-**** 09/04/18 21:17:39 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 09/06/18 17:02:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
 
@@ -105,21 +120,27 @@ V_V6         N00628 0  AC 0
 
 
 
-               D1N4154_1       X_U1.DMAT1      X_U1.DMAT2      
-          IS  153.400000E-12  200.000000E-18   10.000000E-15 
-           N    1.487                                        
-         ISR    4.763000E-09                                 
-         IKF    3.530000E-03                                 
-          BV   35                                            
-         IBV    5.000000E-06                                 
-          RS     .6329         20                            
-          TT    5.771000E-09                                 
-         CJO    2.251000E-12                   40.000000E-12 
-          VJ     .5                              .6          
-           M     .1575                                       
+               D1N4154_1       X_U1.DMAT1      X_U1.DMAT2      X_U2.DMAT1      
+          IS  153.400000E-12  200.000000E-18   10.000000E-15  200.000000E-18 
+           N    1.487                                                        
+         ISR    4.763000E-09                                                 
+         IKF    3.530000E-03                                                 
+          BV   35                                                            
+         IBV    5.000000E-06                                                 
+          RS     .6329         20                              20            
+          TT    5.771000E-09                                                 
+         CJO    2.251000E-12                   40.000000E-12                 
+          VJ     .5                              .6                          
+           M     .1575                                                       
+
+
+               X_U2.DMAT2      
+          IS   10.000000E-15 
+         CJO   40.000000E-12 
+          VJ     .6          
 
 
-**** 09/04/18 21:17:39 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 09/06/18 17:02:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
 
@@ -173,40 +194,40 @@ V_V6         N00628 0  AC 0
            D     .87             .87             .52             .52         
 
 
-               X_U1.NMAT       
-               NPN             
-       LEVEL    1            
-          IS  600.000000E-15 
-          BF  500            
-          NF    1            
-         VAF  150            
-         IKF     .3          
-          BR     .5          
-          NR    1            
-         VAR    7            
-         ISS    0            
-          RB   13            
-          RE     .3          
-          RC   10            
-         CJE   82.000000E-12 
-         VJE     .7          
-         MJE     .4          
-         CJC   33.000000E-12 
-         VJC     .55         
-         MJC     .5          
-        XCJC    1            
-         CJS    0            
-         VJS     .75         
-          TF  300.000000E-12 
-         PTF   25            
-          TR    5.000000E-09 
-          KF    0            
-          AF    1            
-          CN    2.42         
-           D     .87         
+               X_U1.NMAT       X_U2.NMAT       
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  600.000000E-15  600.000000E-15 
+          BF  500             500            
+          NF    1               1            
+         VAF  150             150            
+         IKF     .3              .3          
+          BR     .5              .5          
+          NR    1               1            
+         VAR    7               7            
+         ISS    0               0            
+          RB   13              13            
+          RE     .3              .3          
+          RC   10              10            
+         CJE   82.000000E-12   82.000000E-12 
+         VJE     .7              .7          
+         MJE     .4              .4          
+         CJC   33.000000E-12   33.000000E-12 
+         VJC     .55             .55         
+         MJC     .5              .5          
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          TF  300.000000E-12  300.000000E-12 
+         PTF   25              25            
+          TR    5.000000E-09    5.000000E-09 
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
 
 
-**** 09/04/18 21:17:39 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 09/06/18 17:02:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
 
@@ -221,17 +242,17 @@ V_V6         N00628 0  AC 0
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00274)  -28.4720 (N00282)  -29.2470 (N00286)    -.6201 (N00321)  -30.0000     
+(N00274)  -28.4720 (N00282)  -29.2470 (N00286)   -4.3348 (N00321)  -30.0000     
 
-(N00448)   30.0000 (N00464)   26.2510 (N00472)   26.2510 (N00484)    -.5826     
+(N00448)   30.0000 (N00464)   26.2520 (N00484)    -.5826 (N00488)    -.5826     
 
-(N00488)    -.5826 (N00598)    0.0000 (N00628) 122.5E-21 (N01372)   25.5460     
+(N00598)    0.0000 (N00628) 1.225E-18 (N01334)   26.2520 (N01372)   25.5460     
 
-(N01376)   25.5460 (N02056)  -25.6640 (N02070)  -26.3870 (N02083)  -26.3880     
+(N01376)   25.5460 (N02056)  -25.6640 (N02070)  -26.3880 (N02083)  -26.3890     
 
 (N02345)   26.3390 (N02506)     .6895 (N02518)     .0068 (N02709)   26.1560     
 
-(N02713)   26.1550 (N02728)     .0202 (N04303)   25.0000 (N04323)   19.2330     
+(N02713)   26.1560 (N02728)     .0202 (N04303)   25.0000 (N04323)   19.2330     
 
 (N04329)   19.2330 (N04469)  -19.4330 (N04503)  -20.1660 (N04513)  -25.0000     
 
@@ -239,7 +260,13 @@ V_V6         N00628 0  AC 0
 
 (N04749)   19.8530 (N04755)   19.8520 (N04773)     .0279 (N05223)   20.0000     
 
-(N05703)   20.0000 (X_U1.4)    -.2778 
+(N05703)   20.0000 (N13272)  -28.4820 (N13280)  -29.2470 (N13286)    -.6212     
+
+(N13318)  -30.0000 (N13406)   30.0000 (N13416)   29.7500 (N13422)    -.5711     
+
+(N13428)    -.5711 (N13456)    0.0000 (N13470) 1.225E-18 (N13634)   29.7500     
+
+(X_U1.4)    -.2778 (X_U2.4)    -.2630 
 
 
 
@@ -249,20 +276,24 @@ V_V6         N00628 0  AC 0
 
     V_V1        -4.647E-02
     V_V2        -4.502E-02
-    V_V3        -6.941E-06
+    V_V3        -6.940E-06
     V_V4        -5.884E-02
     V_V5        -4.834E-02
     V_V8        -3.268E-05
     V_V9        -3.268E-05
-    V_V6        -6.941E-06
+    V_V6        -6.940E-06
+    V_V12       -4.513E-06
+    V_V11       -4.513E-06
+    V_V10       -5.002E-03
+    V_V7        -7.859E-03
 
-    TOTAL POWER DISSIPATION   5.43E+00  WATTS
+    TOTAL POWER DISSIPATION   5.81E+00  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 09/04/18 21:17:39 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 09/06/18 17:02:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
 
@@ -274,5 +305,5 @@ V_V6         N00628 0  AC 0
 
 
 
-  Total job time (using Solver 1)   =         .03
+  Total job time (using Solver 1)   =         .05
 
