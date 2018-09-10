@@ -1,5 +1,5 @@
 
-**** 09/06/18 17:02:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 09/09/18 06:44:34 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
 
@@ -23,7 +23,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 20ms 0 
+.AC DEC 100 10 10k
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
 
@@ -89,221 +89,24 @@ D_D2         0 N02506 D1N4154_1
 V_V6         N00628 0  AC 0
 +SIN 0 0.01 1K 0 0 180
 R_R28         N13280 N13318  150 TC=0,0 
-V_V12         N13470 0  AC 0
+V_V12         N13318 0  AC 0
 +SIN 0 0.01 1K 0 0 180
 R_R27         N13272 0  10k TC=0,0 
 R_R23         N13416 N13406  100 TC=0,0 
 Q_Q18         N13272 N13280 N13318 Q2SC1815
-V_V11         N13456 0  AC 0
+V_V11         N13406 0  AC 0
 +SIN 0 0.01 1K 0 0 0
 R_R24         N13634 N13406  100 TC=0,0 
 Q_Q17         N13286 N13272 N13280 Q2SC1815
 V_V10         N13406 0 DC 30v  
-X_U2         N13416 N13456 N13422 N13428 N13470 N13634 MAT02 
+X_U2         N13416 N13456 N13422 N13428 0 N13634 MAT02 
 V_V7         0 N13318 DC 30v  
 R_R25         N13286 N13422  20 TC=0,0 
 R_R26         N13286 N13428  20 TC=0,0 
+V_V13         N13456 0 DC 0Vdc AC 1Vac 
 
 **** RESUMING Transient.cir ****
 .END
-
-**** 09/06/18 17:02:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
-
-
- ****     Diode MODEL PARAMETERS
-
-
-******************************************************************************
-
-
-
-
-               D1N4154_1       X_U1.DMAT1      X_U1.DMAT2      X_U2.DMAT1      
-          IS  153.400000E-12  200.000000E-18   10.000000E-15  200.000000E-18 
-           N    1.487                                                        
-         ISR    4.763000E-09                                                 
-         IKF    3.530000E-03                                                 
-          BV   35                                                            
-         IBV    5.000000E-06                                                 
-          RS     .6329         20                              20            
-          TT    5.771000E-09                                                 
-         CJO    2.251000E-12                   40.000000E-12                 
-          VJ     .5                              .6                          
-           M     .1575                                                       
-
-
-               X_U2.DMAT2      
-          IS   10.000000E-15 
-         CJO   40.000000E-12 
-          VJ     .6          
-
-
-**** 09/06/18 17:02:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
-
- ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
-
-
- ****     BJT MODEL PARAMETERS
-
-
-******************************************************************************
-
-
-
-
-               Q2SC1815        Q2SC3429        Q2SA1015        Q2SA921         
-               NPN             NPN             PNP             PNP             
-       LEVEL    1               1               1               1            
-          IS  639.500000E-18   10.000000E-15    2.040000E-15  930.900000E-15 
-          BF  149.9            87.718         183             460.5          
-          NF    1               1               1               1            
-         VAF  172.5           100             100             100            
-         IKF     .8587           .73698         1.5              .153        
-         ISE  750.100000E-18  100.490000E-15    2.140000E-15  950.500000E-15 
-          NE    1.47            1.4474          1.465           1.483        
-          BR    6.575           1              10.97            1            
-          NR    1               1               1               1            
-         VAR  100             100             100             100            
-         IKR     .4534           .01             .02637         4.548        
-         ISC    4.653000E-15                    2.619000E-15    2.492000E-12 
-          NC    1.185                           1.707           1.09         
-          NK     .5413                          1.319                        
-         ISS    0               0               0               0            
-          RE    0               0               0               0            
-          RC     .7972          0                .5             3.154        
-         CJE    5.000000E-12    2.000000E-12    5.000000E-12    5.000000E-12 
-         VJE     .75             .75             .75             .75         
-         MJE     .3333                           .3333           .3333       
-         CJC    4.858000E-12    1.114800E-12    9.716000E-12    4.990000E-12 
-         VJC     .75             .35             .75             .3905       
-         MJC     .3333           .15702          .3333           .3094       
-        XCJC    1               1               1               1            
-         CJS    0               0               0               0            
-         VJS     .75             .75             .75             .75         
-          TF  314.300000E-12   26.430000E-12  452.400000E-12  945.700000E-12 
-         XTF                   10                              36.930000E+03 
-         VTF   10              10              10              10            
-         ITF   13.01            1               5               7.075        
-          TR   10.000000E-09   10.000000E-09   10.000000E-09   10.000000E-09 
-         XTB    1.5             1.5             1.5             1.5          
-          KF    0               0               0               0            
-          AF    1               1               1               1            
-          CN    2.42            2.42            2.2             2.2          
-           D     .87             .87             .52             .52         
-
-
-               X_U1.NMAT       X_U2.NMAT       
-               NPN             NPN             
-       LEVEL    1               1            
-          IS  600.000000E-15  600.000000E-15 
-          BF  500             500            
-          NF    1               1            
-         VAF  150             150            
-         IKF     .3              .3          
-          BR     .5              .5          
-          NR    1               1            
-         VAR    7               7            
-         ISS    0               0            
-          RB   13              13            
-          RE     .3              .3          
-          RC   10              10            
-         CJE   82.000000E-12   82.000000E-12 
-         VJE     .7              .7          
-         MJE     .4              .4          
-         CJC   33.000000E-12   33.000000E-12 
-         VJC     .55             .55         
-         MJC     .5              .5          
-        XCJC    1               1            
-         CJS    0               0            
-         VJS     .75             .75         
-          TF  300.000000E-12  300.000000E-12 
-         PTF   25              25            
-          TR    5.000000E-09    5.000000E-09 
-          KF    0               0            
-          AF    1               1            
-          CN    2.42            2.42         
-           D     .87             .87         
-
-
-**** 09/06/18 17:02:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
-
- ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
-
-
- ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(N00274)  -28.4720 (N00282)  -29.2470 (N00286)   -4.3348 (N00321)  -30.0000     
-
-(N00448)   30.0000 (N00464)   26.2520 (N00484)    -.5826 (N00488)    -.5826     
-
-(N00598)    0.0000 (N00628) 1.225E-18 (N01334)   26.2520 (N01372)   25.5460     
-
-(N01376)   25.5460 (N02056)  -25.6640 (N02070)  -26.3880 (N02083)  -26.3890     
-
-(N02345)   26.3390 (N02506)     .6895 (N02518)     .0068 (N02709)   26.1560     
-
-(N02713)   26.1560 (N02728)     .0202 (N04303)   25.0000 (N04323)   19.2330     
-
-(N04329)   19.2330 (N04469)  -19.4330 (N04503)  -20.1660 (N04513)  -25.0000     
-
-(N04517)  -20.1660 (N04597)   20.0980 (N04661)     .6976 (N04669)     .0086     
-
-(N04749)   19.8530 (N04755)   19.8520 (N04773)     .0279 (N05223)   20.0000     
-
-(N05703)   20.0000 (N13272)  -28.4820 (N13280)  -29.2470 (N13286)    -.6212     
-
-(N13318)  -30.0000 (N13406)   30.0000 (N13416)   29.7500 (N13422)    -.5711     
-
-(N13428)    -.5711 (N13456)    0.0000 (N13470) 1.225E-18 (N13634)   29.7500     
-
-(X_U1.4)    -.2778 (X_U2.4)    -.2630 
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_V1        -4.647E-02
-    V_V2        -4.502E-02
-    V_V3        -6.940E-06
-    V_V4        -5.884E-02
-    V_V5        -4.834E-02
-    V_V8        -3.268E-05
-    V_V9        -3.268E-05
-    V_V6        -6.940E-06
-    V_V12       -4.513E-06
-    V_V11       -4.513E-06
-    V_V10       -5.002E-03
-    V_V7        -7.859E-03
-
-    TOTAL POWER DISSIPATION   5.81E+00  WATTS
-
-
-
-          JOB CONCLUDED
-
-**** 09/06/18 17:02:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
-
- ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
-
-
- ****     JOB STATISTICS SUMMARY
-
-
-******************************************************************************
-
-
-
-  Total job time (using Solver 1)   =         .05
+ERROR(ORPSIM-15143): Voltage source and/or inductor loop involving V_V10. You may break the loop by adding a series resistance
 

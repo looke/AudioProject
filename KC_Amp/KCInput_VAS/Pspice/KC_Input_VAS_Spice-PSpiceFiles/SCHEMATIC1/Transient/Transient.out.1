@@ -1,7 +1,7 @@
 
-**** 09/03/18 20:07:27 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 09/09/18 06:44:34 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\KC_Input_VAS_Spice-PSpiceFil
+ ** Profile: "SCHEMATIC1-Transient"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice-pspicefil
 
 
  ****     CIRCUIT DESCRIPTION
@@ -18,11 +18,12 @@
 *Libraries: 
 * Profile Libraries :
 * Local Libraries :
+.LIB "D:/DevelopWorkSpace/Github/ORCAD_Lib/Pspice/mat02.lib" 
 * From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 20ms 0 
+.AC DEC 100 10 10k
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
 
@@ -30,22 +31,82 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source KC_INPUT_VAS_SPICE
-R_R1         N00464 N00446  1k TC=0,0 
-R_R2         N00472 N00446  1k TC=0,0 
+R_R1         N00464 N00448  1k TC=0,0 
+R_R2         N01334 N00448  1k TC=0,0 
 R_R3         N00286 N00484  1k TC=0,0 
 R_R4         N00286 N00488  1k TC=0,0 
-R_R5         N00274 0  1k TC=0,0 
-R_R6         N00282 N00321  1k TC=0,0 
+R_R5         N00274 0  10k TC=0,0 
+R_R6         N00282 N00321  100 TC=0,0 
 Q_Q1         N00286 N00274 N00282 Q2SC1815
 Q_Q2         N00274 N00282 N00321 Q2SC1815
-V_V1         0 N00321 DC 25v  
-V_V2         N00446 0 DC 25v  
-V_V3         N00598 0 DC 0Vdc AC 0.001Vac 
-X_U1         N00464 N00598 N00484 N00488 0 N00472 MAT02 
+V_V1         0 N00321 DC 30v  
+V_V2         N00448 0 DC 30v  
+X_U1         N00464 N00598 N00484 N00488 N00628 N01334 MAT02 
+V_V3         N00598 0  AC 0
++SIN 0 0.01 1K 0 0 0
+Q_Q3         N00448 N01334 N01376 Q2SC1815
+Q_Q4         N00448 N00464 N01372 Q2SC1815
+I_I1         N01376 0 DC 0.0005Adc  
+I_I2         N01372 0 DC 0.0005Adc  
+Q_Q5         N02506 N02056 N02070 Q2SC3429 
+Q_Q6         N02728 N02056 N02083 Q2SC3429 
+R_R7         N00321 N02070  200 TC=0,0 
+R_R8         N00321 N02083  200 TC=0,0 
+R_R9         N02056 N02070  2k TC=0,0 
+R_R10         N02709 N02345  10 TC=0,0 
+R_R11         N02713 N02345  10 TC=0,0 
+R_R12         N02345 N00448  100 TC=0,0 
+Q_Q7         N02056 N02518 N02506 Q2SA1015
+R_R13         N02518 0  2k TC=0,0 
+Q_Q8         N02506 N01376 N02709 Q2SA921
+Q_Q9         N02728 N01372 N02713 Q2SA921
+Q_Q12         N04661 N04469 N04503 Q2SC3429 
+R_R17         N04749 N04597  10 TC=0,0 
+Q_Q15         N04661 N04329 N04749 Q2SA921
+Q_Q16         N04773 N04323 N04755 Q2SA921
+R_R15         N04513 N04517  200 TC=0,0 
+R_R19         N04597 N04303  100 TC=0,0 
+R_R16         N04469 N04503  2k TC=0,0 
+R_R18         N04755 N04597  10 TC=0,0 
+Q_Q10         N04303 N05703 N04329 Q2SC1815
+Q_Q14         N04469 N04669 N04661 Q2SA1015
+Q_Q13         N04773 N04469 N04517 Q2SC3429 
+R_R14         N04513 N04503  200 TC=0,0 
+R_R20         N04669 0  2k TC=0,0 
+I_I4         N04323 0 DC 0.005Adc  
+I_I3         N04329 0 DC 0.005Adc  
+Q_Q11         N04303 N05223 N04323 Q2SC1815
+V_V4         N04303 0 DC 25v  
+V_V5         0 N04513 DC 25v  
+V_V8         N05703 0  AC 0
++SIN 20 0.01 1K 0 0 0
+V_V9         N05223 0  AC 0
++SIN 20 0.01 1K 0 0 180
+R_R21         N04773 0  50 TC=0,0 
+D_D1         0 N04661 D1N4154_1 
+R_R22         N02728 0  50 TC=0,0 
+D_D2         0 N02506 D1N4154_1 
+V_V6         N00628 0  AC 0
++SIN 0 0.01 1K 0 0 180
+R_R28         N13280 N13318  150 TC=0,0 
+V_V12         N13318 0  AC 0
++SIN 0 0.01 1K 0 0 180
+R_R27         N13272 0  10k TC=0,0 
+R_R23         N13416 N13406  100 TC=0,0 
+Q_Q18         N13272 N13280 N13318 Q2SC1815
+V_V11         N13406 0  AC 0
++SIN 0 0.01 1K 0 0 0
+R_R24         N13634 N13406  100 TC=0,0 
+Q_Q17         N13286 N13272 N13280 Q2SC1815
+V_V10         N13406 0 DC 30v  
+X_U2         N13416 N13456 N13422 N13428 0 N13634 MAT02 
+V_V7         0 N13318 DC 30v  
+R_R25         N13286 N13422  20 TC=0,0 
+R_R26         N13286 N13428  20 TC=0,0 
+V_V13         N13456 0 DC 0Vdc AC 1Vac 
 
 **** RESUMING Transient.cir ****
 .END
 
-
-ERROR(ORPSIM-15108): Subcircuit MAT02 used by X_U1 is undefined
+ERROR(ORPSIM-15143): Voltage source and/or inductor loop involving V_V10. You may break the loop by adding a series resistance
 

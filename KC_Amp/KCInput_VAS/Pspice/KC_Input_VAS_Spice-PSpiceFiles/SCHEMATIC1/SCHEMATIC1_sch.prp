@@ -1223,6 +1223,7 @@
                 )
             )
         )
+        ("VAC")
     )
     ("instances"
         ("R1"
@@ -1975,6 +1976,21 @@
                 ("POWER"	"0.25")
                 ("SLOPE"	"0.005")
                 ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("V13"
+            ("device_name"	"VAC")
+            ("pspice_path"	"V_V13")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"0Vdc")
+                    ("pspice_param"	"DC")
+                )
+                ("ACMAG"
+                    ("value"	"1Vac")
+                    ("pspice_param"	"AC")
+                )
             )
         )
     )
