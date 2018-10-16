@@ -1,0 +1,85 @@
+
+**** 09/22/18 17:40:42 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ACTest"  [ D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple_RC_Net\simplerc-pspicefiles\schematic1\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ACTest.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC OCT 10 10k 100G
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SIMPLERC
+C_C1         N00326 N00494  100p  TC=0,0 
+R_R1         N00494 N00326  1k TC=0,0 
+V_V1         N00326 0 DC 0Vdc AC 1Vac 
+R_R2         0 N00494  1k TC=0,0 
+
+**** RESUMING ACTest.cir ****
+.END
+
+**** 09/22/18 17:40:42 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ACTest"  [ D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple_RC_Net\simplerc-pspicefiles\schematic1\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00326)    0.0000 (N00494)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/22/18 17:40:42 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ACTest"  [ D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple_RC_Net\simplerc-pspicefiles\schematic1\
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

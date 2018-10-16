@@ -1,0 +1,90 @@
+(ExpressProject "KC_Spice"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\kc_spice.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x"))
+  (Folder "Outputs")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (MPSA42
+      (FullPartName "MPSA42.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\BIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (1N4148
+      (FullPartName "1N4148.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\EDIODE.OLB")
+      (DeviceIndex "0"))
+    (MPSA45
+      (FullPartName "MPSA45.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\BIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (MPS8599
+      (FullPartName "MPS8599.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\BIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (MPS8099
+      (FullPartName "MPS8099.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\BIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (Q2SA1015
+      (FullPartName "Q2SA1015.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\JBIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (Q2SC1815
+      (FullPartName "Q2SC1815.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\JBIPOLAR.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 536"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 50 1351 50 624")
+        (Scroll "-89 -7")
+        (Zoom "108")
+        (Occurrence "/"))
+      (Path
+         "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\PSPICETEST\KCPSPICE\KC_SPICE.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))))

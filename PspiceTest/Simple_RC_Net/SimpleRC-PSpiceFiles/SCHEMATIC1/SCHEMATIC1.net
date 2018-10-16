@@ -1,0 +1,5 @@
+* source SIMPLERC
+C_C1         N00326 N00494  100p  TC=0,0 
+R_R1         N00494 N00326  1k TC=0,0 
+V_V1         N00326 0 DC 0Vdc AC 1Vac 
+R_R2         0 N00494  1k TC=0,0 

@@ -1,0 +1,41 @@
+
+**** 09/17/18 21:08:57 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ACTest"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\PSPICETEST\Simple_RC_Net\SimpleRC-PSpiceFiles\SCHEMATIC1\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ACTest.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC OCT 20 1 10M
+-------------$
+ERROR(ORPSIM-16103): Invalid value
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SIMPLERC
+C_C1         N00333 0  0.001uf  TC=0,0 
+R_R1         N00333 N00326  1k TC=0,0 
+V_V1         N00326 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING ACTest.cir ****
+.END
+

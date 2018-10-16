@@ -1,0 +1,141 @@
+(ExpressProject "3StageAmp"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\3stageamp.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\3stageamp-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\3stageamp-pspicefiles\schematic1\ac.sim"
+        (DisplayName "SCHEMATIC1-AC")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\3stageamp-pspicefiles\schematic1\dc.sim"
+        (DisplayName "SCHEMATIC1-DC")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\3stageamp-pspicefiles\schematic1\ac.sim"))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple3StageAmp\3stageamp.dsn")
+      (Path "Design Resources"
+         "D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple3StageAmp\3stageamp.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "PSpice Resources" "Simulation Profiles"
+         ".\3stageamp-pspicefiles\schematic1\ac.sim"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 532"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 50 1351 50 624")
+        (Scroll "364 308")
+        (Zoom "216")
+        (Occurrence "/"))
+      (Path
+         "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\PSPICETEST\SIMPLE3STAGEAMP\3STAGEAMP.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "OpenLoop"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 125 1134 125 699")
+        (Scroll "421 451")
+        (Zoom "216")
+        (Occurrence "/"))
+      (Path
+         "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\PSPICETEST\SIMPLE3STAGEAMP\3STAGEAMP.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "CloseLoop"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 150 1159 150 724")
+        (Scroll "450 350")
+        (Zoom "216")
+        (Occurrence "/"))
+      (Path
+         "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\PSPICETEST\SIMPLE3STAGEAMP\3STAGEAMP.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "CloseLoopWithMillerCap")))
+  (PartMRUSelector
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (PARAM
+      (FullPartName "PARAM.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VAC
+      (FullPartName "VAC.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (Q2SC1815
+      (FullPartName "Q2SC1815.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\JBIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (MPSA42
+      (FullPartName "MPSA42.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\BIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (Q2SA1015
+      (FullPartName "Q2SA1015.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\JBIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (Q2SC2240
+      (FullPartName "Q2SC2240.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\JBIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (1N4148
+      (FullPartName "1N4148.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\EDIODE.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\capture\library\pspice"))

@@ -1,0 +1,4 @@
+ lib=D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\Library\ediode.lib, offset=20702, size=217
+ lib=D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\Library\jbipolar.lib, offset=63572, size=344
+ lib=D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\Library\jbipolar.lib, offset=861, size=308
+ lib=D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\Library\bipolar.lib, offset=312495, size=315

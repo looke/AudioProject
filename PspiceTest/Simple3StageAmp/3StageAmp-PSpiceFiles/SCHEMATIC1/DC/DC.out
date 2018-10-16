@@ -1,0 +1,200 @@
+
+**** 09/22/18 17:29:58 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC"  [ D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple3StageAmp\3stageamp-pspicefiles\schematic1\d
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "DC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 3STAGEAMP
+Q_Q1         N04101 N02394 N04957 Q2SC1815
+Q_Q2         N04063 N04657 N04961 Q2SC1815
+V_V1         N00637 0 20Vdc
+V_V2         0 N00171 20Vdc
+Q_Q3         N05713 N04101 N05352 Q2SA1015
+R_R3         0 N05182  100 TC=0,0 
+V_V3         N02394 0  
++SIN 0 0.1mv 1k 0 0 0
+Q_Q5         N04965 N03077 N03145 Q2SC1815
+Q_Q6         N05713 N03077 N03326 Q2SC1815
+D_D1         N03077 N03073 D1N4148_1 
+D_D2         N03073 N00171 D1N4148_1 
+R_R4         N03077 0  22k TC=0,0 
+R_R5         N00171 N03145  100 TC=0,0 
+R_R7         N00171 N03326  100 TC=0,0 
+Q_Q8         N04101 N04063 N04059 Q2SA1015
+Q_Q9         N04063 N04063 N04067 Q2SA1015
+R_R9         N00637 N04059  68 TC=0,0 
+R_R10         N00637 N04067  68 TC=0,0 
+R_R11         N04965 N04957  100 TC=0,0 
+R_R12         N04965 N04961  100 TC=0,0 
+R_R13         N05352 N00637  100 TC=0,0 
+Q_Q10         N00637 N05713 N05182 MPSA42
+Q_Q11         N05182 N03077 N05933 Q2SC1815
+R_R14         N00171 N05933  100 TC=0,0 
+R_R15         N04657 N05182  22k TC=0,0 
+R_R16         0 N04657  1k TC=0,0 
+
+**** RESUMING DC.cir ****
+.END
+
+**** 09/22/18 17:29:58 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC"  [ D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple3StageAmp\3stageamp-pspicefiles\schematic1\d
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148_1       
+          IS    2.682000E-09 
+           N    1.836        
+         ISR    1.565000E-09 
+         IKF     .04417      
+          BV  100            
+         IBV  100.000000E-06 
+          RS     .5664       
+          TT   11.540000E-09 
+         CJO    4.000000E-12 
+          VJ     .5          
+           M     .3333       
+
+
+**** 09/22/18 17:29:58 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC"  [ D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple3StageAmp\3stageamp-pspicefiles\schematic1\d
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2SC1815        Q2SA1015        MPSA42          
+               NPN             PNP             NPN             
+       LEVEL    1               1               1            
+          IS  639.500000E-18    2.040000E-15   34.900000E-15 
+          BF  149.9           183               2.650000E+03 
+          NF    1               1               1            
+         VAF  172.5           100             100            
+         IKF     .8587          1.5              .02379      
+         ISE  750.100000E-18    2.140000E-15   16.320000E-12 
+          NE    1.47            1.465           1.708        
+          BR    6.575          10.97            9.769        
+          NR    1               1               1            
+         VAR  100             100                            
+         IKR     .4534           .02637                      
+         ISC    4.653000E-15    2.619000E-15                 
+          NC    1.185           1.707                        
+          NK     .5413          1.319                        
+         ISS    0               0               0            
+          RB                                   10            
+          RE    0               0               0            
+          RC     .7972           .5             7            
+         CJE    5.000000E-12    5.000000E-12   49.620000E-12 
+         VJE     .75             .75             .75         
+         MJE     .3333           .3333           .4136       
+         CJC    4.858000E-12    9.716000E-12   14.230000E-12 
+         VJC     .75             .75             .75         
+         MJC     .3333           .3333           .5489       
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          TF  314.300000E-12  452.400000E-12    1.690000E-09 
+         XTF                                  150            
+         VTF   10              10              20            
+         ITF   13.01            5               5            
+          TR   10.000000E-09   10.000000E-09  934.300000E-12 
+         XTB    1.5             1.5             1.5          
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.2             2.42         
+           D     .87             .52             .87         
+
+
+**** 09/22/18 17:29:58 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC"  [ D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple3StageAmp\3stageamp-pspicefiles\schematic1\d
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00171)  -20.0000 (N00637)   20.0000 (N02394)    0.0000 (N03073)  -19.4070     
+
+(N03077)  -18.8150 (N03145)  -19.5760 (N03326)  -19.5760 (N04059)   19.8580     
+
+(N04063)   19.1430 (N04067)   19.8580 (N04101)   18.8390 (N04657) 169.6E-06     
+
+(N04957)    -.7429 (N04961)    -.7427 (N04965)    -.9534 (N05182)     .2882     
+
+(N05352)   19.5690 (N05713)     .9634 (N05933)  -19.5760 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.551E-02
+    V_V2        -1.350E-02
+    V_V3        -1.293E-05
+
+    TOTAL POWER DISSIPATION   5.80E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/22/18 17:29:58 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC"  [ D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple3StageAmp\3stageamp-pspicefiles\schematic1\d
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

@@ -1,0 +1,57 @@
+
+**** 09/22/18 12:19:29 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ac"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\PSPICETEST\Simple3StageAmp\3StageAmp-PSpiceFiles\SCHEMATIC1\A
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "AC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 20 10 1000Meg
+.STEP LIN PARAM var 0K 5K 1K 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 3STAGEAMP
+Q_Q1         N00199 N01467 N00203 Q2SC1815
+Q_Q2         N00183 N01210 N00203 Q2SC1815
+I_I1         N00203 N00171 DC 2mAdc  
+V_V1         N00183 0 35Vdc
+V_V2         0 N00171 35Vdc
+R_R1         N00199 N00183  1k TC=0,0 
+Q_Q3         N01023 N00199 N00682 Q2SA1015
+I_I2         N01023 N00171 DC 10mAdc  
+R_R2         N00682 N00183  22 TC=0,0 
+Q_Q4         N00183 N01023 N01037 Q2SC1815
+I_I3         N01037 N00171 DC 10mAdc  
+R_R3         0 N01037  10 TC=0,0 
+R_R4         N01210 N01037  22k TC=0,0 
+R_R5         0 N01210  {var} TC=0,0 
+V_V4         N01467 0 DC 0Vdc AC 1mVac 
+C_C1         N00199 N01023  33p  TC=0,0 
+.PARAM  var=1k
+
+**** RESUMING AC.cir ****
+.END
+
+
+ERROR(ORPSIM-15152): Resistor R_R5 has zero value
+

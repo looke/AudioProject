@@ -1,0 +1,18 @@
+** Profile: "SCHEMATIC1-ACTest"  [ D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple_RC_Net\simplerc-pspicefiles\schematic1\actest.sim ] 
+
+** Creating circuit file "ACTest.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC OCT 10 10k 100G
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END
