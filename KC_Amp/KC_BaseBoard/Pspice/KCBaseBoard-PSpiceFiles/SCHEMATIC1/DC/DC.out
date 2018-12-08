@@ -1,0 +1,87 @@
+
+**** 12/08/18 20:43:09 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC"  [ D:\DEVELOPWORKSPACE\GITHUB\AudioProject\KC_Amp\KC_BaseBoard\Pspice\KCBaseBoard-PSpiceFiles\SCHEMATIC1
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "DC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source KCBASEBOARD
+C_C1         N00282 N00190  47n  TC=0,0 
+C_C2         0 N00204  100n  TC=0,0 
+R_R1         0 N00190  270k TC=0,0 
+R_R2         N00190 N00204  402 TC=0,0 
+V_V1         N00282 0  
++SIN 0 1 10k 0 0 0
+
+**** RESUMING DC.cir ****
+.END
+
+**** 12/08/18 20:43:09 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC"  [ D:\DEVELOPWORKSPACE\GITHUB\AudioProject\KC_Amp\KC_BaseBoard\Pspice\KCBaseBoard-PSpiceFiles\SCHEMATIC1
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00190)    0.0000 (N00204)    0.0000 (N00282)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/08/18 20:43:09 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC"  [ D:\DEVELOPWORKSPACE\GITHUB\AudioProject\KC_Amp\KC_BaseBoard\Pspice\KCBaseBoard-PSpiceFiles\SCHEMATIC1
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

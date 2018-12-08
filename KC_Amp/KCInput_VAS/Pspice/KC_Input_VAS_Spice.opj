@@ -101,24 +101,13 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 396 0 738"))
+        (Placement "44 0 1 -1 -1 -8 -30 0 396 0 738"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 25 1322 163 733")
-        (Scroll "-100 0")
-        (Zoom "108")
-        (Occurrence "/"))
-      (Path
-         "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\KCINPUT_VAS\PSPICE\KC_INPUT_VAS_SPICE.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "InputStage_Plus_VAS"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 1376 75 649")
-        (Scroll "-102 0")
+        (Placement "44 2 3 -1 -1 -8 -30 75 1376 75 649")
+        (Scroll "-235 -7")
         (Zoom "108")
         (Occurrence "/"))
       (Path
