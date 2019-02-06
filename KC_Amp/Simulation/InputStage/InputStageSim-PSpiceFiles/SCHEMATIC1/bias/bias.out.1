@@ -1,0 +1,52 @@
+
+**** 02/06/19 10:48:58 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\InputStage\InputStageSim-PSpiceFiles\SCHE
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OP
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INPUTSTAGESIM
+R_R27         N14545 0  10k TC=0,0 
+R_R26         N14549 N14689  10 TC=0,0 
+Q_Q18         N14545 N14559 N14579 Q2SC1815
+R_R24         N14759 N14667  1000 TC=0,0 
+V_V7         0 N14579 DC 25v  
+Q_Q17         N14549 N14545 N14559 Q2SC1815
+V_V10         N14667 0 DC 25v  
+R_R23         N15241 N14667  1000 TC=0,0 
+R_R25         N14549 N15237  10 TC=0,0 
+R_R28         N14559 N14579  150 TC=0,0 
+V_V11         N15040 0 DC 0Vdc AC 0.1Vac 
+V_V12         N15025 0 DC 0Vdc AC 0.1Vac 180
+X_U3         N15241 N15040 N15237 N14689 N15025 N14759 MAT02 
+
+**** RESUMING bias.cir ****
+.END
+
+
+ERROR(ORPSIM-15108): Subcircuit MAT02 used by X_U3 is undefined
+

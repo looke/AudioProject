@@ -1,0 +1,175 @@
+
+**** 02/06/19 11:16:26 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\InputStage\InputStageSim-PSpiceFiles\SCHE
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "d:/developworkspace/github/orcad_lib/pspice/mat02.lib" 
+* From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 200 10 100K
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INPUTSTAGESIM
+R_R27         N14545 0  10k TC=0,0 
+R_R26         N14549 N14689  10 TC=0,0 
+Q_Q18         N14545 N14559 N14579 Q2SC1815
+R_R24         N14763 N14667  500 TC=0,0 
+V_V7         0 N14579 DC 30v  
+Q_Q17         N14549 N14545 N14559 Q2SC1815
+V_V10         N14667 0 DC 30v  
+R_R23         N15691 N14667  500 TC=0,0 
+R_R25         N14549 N15237  10 TC=0,0 
+R_R28         N14559 N14579  150 TC=0,0 
+X_U3         N15691 N15040 N15237 N14689 0 N14763 MAT02 
+V_V11         N15040 0 DC 0Vdc AC 0.1Vac 
+
+**** RESUMING bias.cir ****
+.END
+
+**** 02/06/19 11:16:26 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\InputStage\InputStageSim-PSpiceFiles\SCHE
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.DMAT1      X_U3.DMAT2      
+          IS  200.000000E-18   10.000000E-15 
+          RS   20                            
+         CJO                   40.000000E-12 
+          VJ                     .6          
+
+
+**** 02/06/19 11:16:26 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\InputStage\InputStageSim-PSpiceFiles\SCHE
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2SC1815        X_U3.NMAT       
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  639.500000E-18  600.000000E-15 
+          BF  149.9           500            
+          NF    1               1            
+         VAF  172.5           150            
+         IKF     .8587           .3          
+         ISE  750.100000E-18                 
+          NE    1.47                         
+          BR    6.575            .5          
+          NR    1               1            
+         VAR  100               7            
+         IKR     .4534                       
+         ISC    4.653000E-15                 
+          NC    1.185                        
+          NK     .5413                       
+         ISS    0               0            
+          RB                   13            
+          RE    0                .3          
+          RC     .7972         10            
+         CJE    5.000000E-12   82.000000E-12 
+         VJE     .75             .7          
+         MJE     .3333           .4          
+         CJC    4.858000E-12   33.000000E-12 
+         VJC     .75             .55         
+         MJC     .3333           .5          
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          TF  314.300000E-12  300.000000E-12 
+         VTF   10                            
+         ITF   13.01                         
+         PTF                   25            
+          TR   10.000000E-09    5.000000E-09 
+         XTB    1.5                          
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 02/06/19 11:16:26 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\InputStage\InputStageSim-PSpiceFiles\SCHE
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14545)  -28.4820 (N14549)    -.5963 (N14559)  -29.2470 (N14579)  -30.0000     
+
+(N14667)   30.0000 (N14689)    -.5712 (N14763)   28.7500 (N15040)    0.0000     
+
+(N15237)    -.5712 (N15691)   28.7500 (X_U3.4)    -.2641 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V7        -7.859E-03
+    V_V10       -5.002E-03
+    V_V11       -4.540E-06
+
+    TOTAL POWER DISSIPATION   3.86E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 02/06/19 11:16:26 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\InputStage\InputStageSim-PSpiceFiles\SCHE
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+
