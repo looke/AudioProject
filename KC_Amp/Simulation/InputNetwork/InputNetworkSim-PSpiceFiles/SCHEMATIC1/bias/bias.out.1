@@ -1,0 +1,46 @@
+
+**** 02/06/19 09:43:28 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AudioProject\KC_Amp\Simulation\InputNetwork\InputNetworkSim-PSpiceFiles\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 10 1000K
+.STEP LIN PARAM R2 247k 547k 100k 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INPUTNETWORKSIM
+R_R1         0 N00209  100k TC=0,0 
+R_R2         0 N00209  {R2} TC=0,0 
+R_R3         N00209 N00188  402 TC=0,0 
+R_R4         N00188 N00202  10 TC=0,0 
+C_C1         0 N00188  1n  TC=0,0 
+R_R5         0 N00202  100k TC=0,0 
+V_V1         N00209 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING bias.cir ****
+.END
+
+ERROR(ORPSIM-15167): Undefined parameter: R2.
+

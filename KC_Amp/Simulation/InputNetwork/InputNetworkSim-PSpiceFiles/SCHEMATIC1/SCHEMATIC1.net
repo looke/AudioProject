@@ -1,0 +1,9 @@
+* source INPUTNETWORKSIM
+R_R2         0 N00209  {R2} TC=0,0 
+R_R3         N00209 N00188  {R3} TC=0,0 
+R_R4         N00188 N00202  10 TC=0,0 
+C_C1         0 N00188  {C1}  TC=0,0 
+R_R5         0 N00202  {R5} TC=0,0 
+V_V1         N00306 0 DC 0Vdc AC 1Vac 
+R_R6         N00306 N00209  {R6} TC=0,0 
+.PARAM  c1=1n r2=50k r3=400 r5=10k r6=20
