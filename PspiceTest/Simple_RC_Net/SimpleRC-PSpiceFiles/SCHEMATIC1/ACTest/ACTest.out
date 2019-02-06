@@ -1,5 +1,5 @@
 
-**** 09/22/18 17:40:42 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/06/19 08:40:56 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-ACTest"  [ D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple_RC_Net\simplerc-pspicefiles\schematic1\
 
@@ -38,7 +38,7 @@ R_R2         0 N00494  1k TC=0,0
 **** RESUMING ACTest.cir ****
 .END
 
-**** 09/22/18 17:40:42 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/06/19 08:40:56 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-ACTest"  [ D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple_RC_Net\simplerc-pspicefiles\schematic1\
 
@@ -69,7 +69,7 @@ R_R2         0 N00494  1k TC=0,0
 
           JOB CONCLUDED
 
-**** 09/22/18 17:40:42 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/06/19 08:40:56 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-ACTest"  [ D:\DevelopWorkSpace\Github\AudioProject\PspiceTest\Simple_RC_Net\simplerc-pspicefiles\schematic1\
 
@@ -81,5 +81,5 @@ R_R2         0 N00494  1k TC=0,0
 
 
 
-  Total job time (using Solver 1)   =        0.00
+  Total job time (using Solver 1)   =         .02
 
