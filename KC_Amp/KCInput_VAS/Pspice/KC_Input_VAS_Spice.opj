@@ -96,21 +96,44 @@
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles")
       (Select "Design Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 396 0 738"))
+        (Placement "44 2 3 -1 -1 -8 -30 0 396 0 738"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 75 1376 75 649")
-        (Scroll "-235 -7")
+        (Placement "44 0 1 -1 -1 -8 -30 75 1376 75 649")
+        (Scroll "-102 0")
         (Zoom "108")
         (Occurrence "/"))
       (Path
          "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\KCINPUT_VAS\PSPICE\KC_INPUT_VAS_SPICE.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "VAS_Only"))))
+      (Page "VAS_Only"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 25 1034 25 599")
+        (Scroll "0 0")
+        (Zoom "108")
+        (Occurrence "/"))
+      (Path
+         "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\KCINPUT_VAS\PSPICE\KC_INPUT_VAS_SPICE.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "InputStageOnly"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 50 1059 50 624")
+        (Scroll "0 0")
+        (Zoom "108")
+        (Occurrence "/"))
+      (Path
+         "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\KCINPUT_VAS\PSPICE\KC_INPUT_VAS_SPICE.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "InputStage_Plus_VAS"))))
