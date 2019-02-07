@@ -1,0 +1,13 @@
+* source VUMETERDRIVER
+X_U1         N00600 N00477 N00330 N00366 N00397 NE5532 
+C_C1         0 N00600  0.01n  TC=0,0 
+C_C2         0 N00497  47u  TC=0,0 
+C_C3         N00397 N00426  4.7u  TC=0,0 
+R_R1         N00723 N00600  4750 TC=0,0 
+R_R2         0 N00600  47k TC=0,0 
+R_R3         N00497 N00477  10k TC=0,0 
+R_R4         N00477 N00397  100k TC=0,0 
+V_V1         N00330 0 12Vdc
+V_V2         0 N00366 12Vdc
+R_R5         0 N00426  500k TC=0,0 
+V_V3         N00723 0 DC 0Vdc AC 0.1Vac 
