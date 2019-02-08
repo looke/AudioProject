@@ -1,0 +1,200 @@
+
+**** 02/08/19 14:34:20 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VoltageAmpStage\voltageampstagesim-pspice
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source VOLTAGEAMPSTAGESIM
+R_R18         N08620 N08462  10 TC=0,0 
+Q_Q12         N08526 N08334 N08368 Q2SC3429 
+R_R14         N08378 N08368  200 TC=0,0 
+V_V4         N08162 0 DC 25v  
+R_R16         N08334 N08368  2k TC=0,0 
+V_V9         N08760 0  AC 0
++SIN 20 0.001 1K 0 0 180
+Q_Q15         N08526 N08208 N08614 Q2SA921
+Q_Q16         N08638 N08202 N08620 Q2SA921
+V_V8         N08804 0  AC 0
++SIN 20 0.001 1K 0 0 0
+Q_Q11         N08162 N08760 N08202 Q2SC1815
+Q_Q10         N08162 N08804 N08208 Q2SC1815
+V_V5         0 N08378 DC 25v  
+R_R17         N08614 N08462  10 TC=0,0 
+R_R20         N08534 0  2k TC=0,0 
+Q_Q13         N08638 N08334 N08382 Q2SC3429 
+R_R19         N08462 N08162  100 TC=0,0 
+Q_Q14         N08334 N08534 N08526 Q2SA1015
+I_I4         N08202 0 DC 0.001Adc  
+R_R15         N08378 N08382  200 TC=0,0 
+I_I3         N08208 0 DC 0.001Adc  
+D_D1         0 N08526 D1N4154_1 
+C_C2         N08804 N11324  1n  TC=0,0 
+C_C3         N08638 N11365  100p  TC=0,0 
+R_R23         N11324 N08162  45 TC=0,0 
+R_R24         N11365 N08760  45 TC=0,0 
+
+**** RESUMING bias.cir ****
+.END
+
+**** 02/08/19 14:34:20 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VoltageAmpStage\voltageampstagesim-pspice
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4154_1       
+          IS  153.400000E-12 
+           N    1.487        
+         ISR    4.763000E-09 
+         IKF    3.530000E-03 
+          BV   35            
+         IBV    5.000000E-06 
+          RS     .6329       
+          TT    5.771000E-09 
+         CJO    2.251000E-12 
+          VJ     .5          
+           M     .1575       
+
+
+**** 02/08/19 14:34:20 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VoltageAmpStage\voltageampstagesim-pspice
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2SC3429        Q2SA921         Q2SC1815        Q2SA1015        
+               NPN             PNP             NPN             PNP             
+       LEVEL    1               1               1               1            
+          IS   10.000000E-15  930.900000E-15  639.500000E-18    2.040000E-15 
+          BF   87.718         460.5           149.9           183            
+          NF    1               1               1               1            
+         VAF  100             100             172.5           100            
+         IKF     .73698          .153            .8587          1.5          
+         ISE  100.490000E-15  950.500000E-15  750.100000E-18    2.140000E-15 
+          NE    1.4474          1.483           1.47            1.465        
+          BR    1               1               6.575          10.97         
+          NR    1               1               1               1            
+         VAR  100             100             100             100            
+         IKR     .01            4.548            .4534           .02637      
+         ISC                    2.492000E-12    4.653000E-15    2.619000E-15 
+          NC                    1.09            1.185           1.707        
+          NK                                     .5413          1.319        
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               3.154            .7972           .5          
+         CJE    2.000000E-12    5.000000E-12    5.000000E-12    5.000000E-12 
+         VJE     .75             .75             .75             .75         
+         MJE                     .3333           .3333           .3333       
+         CJC    1.114800E-12    4.990000E-12    4.858000E-12    9.716000E-12 
+         VJC     .35             .3905           .75             .75         
+         MJC     .15702          .3094           .3333           .3333       
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF   26.430000E-12  945.700000E-12  314.300000E-12  452.400000E-12 
+         XTF   10              36.930000E+03                                 
+         VTF   10              10              10              10            
+         ITF    1               7.075          13.01            5            
+          TR   10.000000E-09   10.000000E-09   10.000000E-09   10.000000E-09 
+         XTB    1.5             1.5             1.5             1.5          
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.2             2.42            2.2          
+           D     .87             .52             .87             .52         
+
+
+**** 02/08/19 14:34:20 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VoltageAmpStage\voltageampstagesim-pspice
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N08162)   25.0000 (N08202)   19.2760 (N08208)   19.2760 (N08334)  -19.4230     
+
+(N08368)  -20.1560 (N08378)  -25.0000 (N08382)  -20.1530 (N08462)   20.1410     
+
+(N08526)     .6963 (N08534)     .0083 (N08614)   19.8960 (N08620)   19.9000     
+
+(N08638)   18.3330 (N08760)   20.0000 (N08804)   20.0000 (N11324)   25.0000     
+
+(N11365)   20.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4        -5.045E-02
+    V_V9        -6.170E-06
+    V_V8        -6.236E-06
+    V_V5        -4.846E-02
+
+    TOTAL POWER DISSIPATION   2.47E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 02/08/19 14:34:20 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VoltageAmpStage\voltageampstagesim-pspice
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

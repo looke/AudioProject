@@ -99,16 +99,11 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\DEVELOPWORKSPACE\GITHUB\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim.dsn")
-      (Path "Design Resources"
-         "D:\DEVELOPWORKSPACE\GITHUB\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim.dsn"
-         "SCHEMATIC1")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Simulation Profiles")
       (Select "PSpice Resources" "Simulation Profiles"
-         "D:\DEVELOPWORKSPACE\GITHUB\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\schematic1\bias.sim"))
+         "D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\schematic1\bias.sim"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -118,7 +113,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 100 1401 100 674")
+        (Placement "44 0 1 -1 -1 -8 -30 120 1421 63 637")
         (Scroll "0 314")
         (Zoom "216")
         (Occurrence "/"))

@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schematic1\bias.sim ] 
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "d:/developworkspace/github/orcad_lib/pspice/mat02.lib" 
+* From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 10 100000k
+.STEP LIN PARAM R17 10 100 20 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

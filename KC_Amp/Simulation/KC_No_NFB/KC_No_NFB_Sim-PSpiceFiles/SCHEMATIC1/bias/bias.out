@@ -1,0 +1,578 @@
+
+**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "d:/developworkspace/github/orcad_lib/pspice/mat02.lib" 
+* From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 10 100000k
+.STEP LIN PARAM R17 10 100 20 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source KC_NO_NFB_SIM
+R_R28         N17643 N17663  {R28} TC=0,0 
+R_R25         N17633 N17931  {R26} TC=0,0 
+X_U3         N25024 IN N17931 N17751 N37427 N17779 MAT02 
+R_R24         N19508 N17733  {R24} TC=0,0 
+R_R23         N22875 N17733  {R24} TC=0,0 
+R_R26         N17633 N17751  {R26} TC=0,0 
+R_R27         N17629 0  10k TC=0,0 
+Q_Q17         N17633 N17629 N17643 Q2SC1815
+Q_Q18         N17629 N17643 N17663 Q2SC1815
+Q_Q10         N17733 N19508 N18912 Q2SC1815
+R_R15         N17663 N19086  200 TC=0,0 
+D_D1         0 N19210 D1N4154_1 
+R_R17         N19318 N19166  {R17} TC=0,0 
+Q_Q11         N17733 N22875 N18906 Q2SC1815
+R_R16         N19018 N19072  2k TC=0,0 
+Q_Q12         N19210 N19018 N19072 Q2SC3429 
+I_I3         N18912 0 DC 0.001Adc  
+R_R18         N19324 N19166  {R17} TC=0,0 
+I_I4         N18906 0 DC 0.001Adc  
+R_R20         N19238 0  2k TC=0,0 
+R_R21         N22891 N31818  45.3 TC=0,0 
+Q_Q14         N19018 N19238 N19210 Q2SA1015
+R_R19         N19166 N17733  {R19} TC=0,0 
+Q_Q13         N22891 N19018 N19086 Q2SC3429 
+R_R14         N17663 N19072  200 TC=0,0 
+R_R32         N23012 N17733  45 TC=0,0 
+R_R33         N22887 N22875  45 TC=0,0 
+C_C3         N22891 N22887  {C3}  TC=0,0 
+C_C4         N19508 N23012  1n  TC=0,0 
+J_J1         N22875 N25113 N25024 J2N4391 
+J_J2         N19508 N25106 N17779 J2N4391 
+R_R34         N17751 N25106  60 TC=0,0 
+R_R35         N17931 N25113  60 TC=0,0 
+Q_Q19         N19210 N18912 N19318 Q2SA970
+Q_Q20         N22891 N18906 N19324 Q2SA970
+C_C6         N22875 N26817  2.2n  TC=0,0 
+R_R36         N26817 N19508  30 TC=0,0 
+Q_Q21         N19508 N19508 N22875 Q2N6520
+V_V4         N17733 0 DC 25  
+V_V5         0 N17663 DC 25  
+R_R37         0 N32598  15k TC=0,0 
+R_R1         N31818 N31642  10 TC=0,0 
+R_R6         N31586 N31582  51 TC=0,0 
+R_R8         N31582 N31596  10 TC=0,0 
+R_R7         N31616 N31612  10 TC=0,0 
+R_R3         N31632 N31612  51 TC=0,0 
+R_R5         N31686 N31538  10 TC=0,0 
+R_R10         N31570 OUT  10 TC=0,0 
+I_I1         N17733 N31612 DC 0.005Adc  
+Q_Q3         N31658 N31642 N31632 MPS8599
+R_R2         N31652 N31818  10 TC=0,0 
+R_R4         N31658 N31570  10 TC=0,0 
+Q_Q1         N17733 N31616 N31538 Q2N5223
+Q_Q4         N31686 N31652 N31586 MPS8099
+Q_Q2         N31570 N31596 N17663 Q2N5226
+C_C1         N31582 N31612  {C1}  TC=0,0 
+I_I2         N31582 N17663 DC 0.005Adc  
+R_R9         OUT N31538  10 TC=0,0 
+C_C7         N32598 N31818  10n  TC=0,0 
+V_V6         IN 0 DC 0Vdc AC 0.001Vac 
+R_R38         N37427 0  10 TC=0,0 
+.PARAM  r17=10 r28=150 c1=10n r19=100 c3=100p r24=1000 r26=10
+
+**** RESUMING bias.cir ****
+.END
+
+**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4154_1       X_U3.DMAT1      X_U3.DMAT2      
+          IS  153.400000E-12  200.000000E-18   10.000000E-15 
+           N    1.487                                        
+         ISR    4.763000E-09                                 
+         IKF    3.530000E-03                                 
+          BV   35                                            
+         IBV    5.000000E-06                                 
+          RS     .6329         20                            
+          TT    5.771000E-09                                 
+         CJO    2.251000E-12                   40.000000E-12 
+          VJ     .5                              .6          
+           M     .1575                                       
+
+
+**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2SC1815        Q2SC3429        Q2SA1015        Q2SA970         
+               NPN             NPN             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS  639.500000E-18   10.000000E-15    2.040000E-15  465.400000E-15 
+          BF  149.9            87.718         183             407.6          
+          NF    1               1               1               1            
+         VAF  172.5           100             100              57            
+         IKF     .8587           .73698         1.5              .3998       
+         ISE  750.100000E-18  100.490000E-15    2.140000E-15    4.683000E-12 
+          NE    1.47            1.4474          1.465           2.051        
+          BR    6.575           1              10.97            1            
+          NR    1               1               1               1            
+         VAR  100             100             100             100            
+         IKR     .4534           .01             .02637         6.032        
+         ISC    4.653000E-15                    2.619000E-15  465.400000E-15 
+          NC    1.185                           1.707           1.048        
+          NK     .5413                          1.319           1.192        
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC     .7972          0                .5             2.343        
+         CJE    5.000000E-12    2.000000E-12    5.000000E-12    5.000000E-12 
+         VJE     .75             .75             .75             .75         
+         MJE     .3333                           .3333           .3333       
+         CJC    4.858000E-12    1.114800E-12    9.716000E-12   11.590000E-12 
+         VJC     .75             .35             .75            1.155        
+         MJC     .3333           .15702          .3333           .4014       
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF  314.300000E-12   26.430000E-12  452.400000E-12    1.252000E-09 
+         XTF                   10                                            
+         VTF   10              10              10              10            
+         ITF   13.01            1               5               1            
+          TR   10.000000E-09   10.000000E-09   10.000000E-09   10.000000E-09 
+         XTB    1.5             1.5             1.5             1.5          
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.2             2.2          
+           D     .87             .87             .52             .52         
+
+
+               Q2N6520         MPS8599         Q2N5223         MPS8099         
+               PNP             PNP             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS   34.900000E-15   10.680000E-15   61.010000E-15    4.872000E-15 
+          BF   90.34          187.7           309.5             9.599000E+03 
+          NF    1               1               1               1            
+         VAF  100             100              57.37          100            
+         IKF     .4921           .2203           .101            .1434       
+         ISE   34.900000E-15   26.070000E-15   61.010000E-15   14.650000E-15 
+          NE    1.291           1.401           1.33            1.315        
+          BR    5.434           1.833            .2094          6.935        
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RB   10              10              10              10            
+          RE    0               0               0               0            
+          RC   10                .8             2.14             .7          
+         CJE   88.560000E-12   25.110000E-12    5.928000E-12   10.490000E-12 
+         VJE     .75             .75             .75             .75         
+         MJE     .2744           .3626           .3333           .4602       
+         CJC   31.630000E-12   14.160000E-12    6.072000E-12    5.805000E-12 
+         VJC     .75             .75             .75             .75         
+         MJC     .5163           .5585           .3333           .4312       
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF    1.648000E-09  591.100000E-12  316.400000E-12  407.000000E-12 
+         XTF  180              50               8               2.5          
+         VTF   20              12               5               3            
+         ITF    2               1.5              .2              .18         
+          TR  546.900000E-09  358.600000E-09    1.531000E-06  565.000000E-12 
+         XTB    1.5             1.5             1.5             1.5          
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.2             2.42            2.42         
+           D     .52             .52             .87             .87         
+
+
+               Q2N5226         X_U3.NMAT       
+               PNP             NPN             
+       LEVEL    1               1            
+          IS  650.600000E-18  600.000000E-15 
+          BF  138.8           500            
+          NF    1               1            
+         VAF  115.7           150            
+         IKF    1.109            .3          
+         ISE  111.200000E-15                 
+          NE    1.856                        
+          BR    3.713            .5          
+          NR    1               1            
+         VAR                    7            
+         ISS    0               0            
+          RB   10              13            
+          RE    0                .3          
+          RC     .715          10            
+         CJE   19.820000E-12   82.000000E-12 
+         VJE     .75             .7          
+         MJE     .3357           .4          
+         CJC   14.760000E-12   33.000000E-12 
+         VJC     .75             .55         
+         MJC     .5383           .5          
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          TF  761.300000E-12  300.000000E-12 
+         XTF    1.7                          
+         VTF    5                            
+         ITF     .65                         
+         PTF                   25            
+          TR  113.900000E-09    5.000000E-09 
+         XTB    1.5                          
+          KF    0               0            
+          AF    1               1            
+          CN    2.2             2.42         
+           D     .52             .87         
+
+
+**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               J2N4391         
+               NJF             
+         VTO   -5.803        
+        BETA    2.658000E-03 
+      LAMBDA     .013        
+          IS  205.200000E-15 
+         ISR    1.988000E-12 
+       ALPHA   20.980000E-06 
+          VK  123.7          
+          RD    1            
+          RS    1            
+         CGD    5.350000E-12 
+         CGS    4.760000E-12 
+           M     .4069       
+       VTOTC   -2.500000E-03 
+     BETATCE    -.5          
+          KF   34.430000E-18 
+
+
+**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R17 =   10    
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)   14.9010  (N17629)  -23.4870 (N17633)    -.6001     
+
+(N17643)  -24.2520 (N17663)  -25.0000 (N17733)   25.0000 (N17751)    -.5752     
+
+(N17779)    4.3565 (N17931)    -.5752 (N18906)   21.7860 (N18912)   21.7880     
+
+(N19018)  -21.8180 (N19072)  -22.5320 (N19086)  -22.5300 (N19166)   22.5270     
+
+(N19210)     .6843 (N19238)     .0058 (N19318)   22.4030 (N19324)   22.4050     
+
+(N19508)   22.5130 (N22875)   22.5110 (N22887)   22.5110 (N22891)   14.7220     
+
+(N23012)   25.0000 (N25024)    4.3560 (N25106)    -.5752 (N25113)    -.5752     
+
+(N26817)   22.5130 (N31538)   14.9990 (N31570)   14.8020 (N31582)   13.9390     
+
+(N31586)   14.0330 (N31596)   13.9700 (N31612)   15.6710 (N31616)   15.6700     
+
+(N31632)   15.4190 (N31642)   14.7230 (N31652)   14.7230 (N31658)   14.8510     
+
+(N31686)   14.9810 (N31818)   14.7230 (N32598)    0.0000 (N37427)-52.84E-06     
+
+(X_U3.4)    -.3164 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4        -4.829E-02
+    V_V5        -4.865E-02
+    V_V6        -5.290E-06
+
+    TOTAL POWER DISSIPATION   2.42E+00  WATTS
+
+
+**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R17 =   30    
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)   22.3400  (N17629)  -23.4870 (N17633)    -.6001     
+
+(N17643)  -24.2520 (N17663)  -25.0000 (N17733)   25.0000 (N17751)    -.5752     
+
+(N17779)    4.3565 (N17931)    -.5752 (N18906)   21.7860 (N18912)   21.7880     
+
+(N19018)  -22.0350 (N19072)  -22.7470 (N19086)  -22.7440 (N19166)   22.7420     
+
+(N19210)     .6827 (N19238)     .0055 (N19318)   22.4000 (N19324)   22.4060     
+
+(N19508)   22.5130 (N22875)   22.5110 (N22887)   22.5110 (N22891)   22.1640     
+
+(N23012)   25.0000 (N25024)    4.3560 (N25106)    -.5752 (N25113)    -.5752     
+
+(N26817)   22.5130 (N31538)   22.4380 (N31570)   22.2420 (N31582)   21.3800     
+
+(N31586)   21.4750 (N31596)   21.4110 (N31612)   23.1130 (N31616)   23.1120     
+
+(N31632)   22.8610 (N31642)   22.1650 (N31652)   22.1650 (N31658)   22.2910     
+
+(N31686)   22.4200 (N31818)   22.1650 (N32598)    0.0000 (N37427)-52.84E-06     
+
+(X_U3.4)    -.3164 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4        -4.607E-02
+    V_V5        -4.643E-02
+    V_V6        -5.290E-06
+
+    TOTAL POWER DISSIPATION   2.31E+00  WATTS
+
+
+**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R17 =   50    
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)   22.4040  (N17629)  -23.4870 (N17633)    -.6001     
+
+(N17643)  -24.2520 (N17663)  -25.0000 (N17733)   25.0000 (N17751)    -.5752     
+
+(N17779)    4.3565 (N17931)    -.5752 (N18906)   21.7870 (N18912)   21.7880     
+
+(N19018)  -22.2200 (N19072)  -22.9300 (N19086)  -22.9270 (N19166)   22.9210     
+
+(N19210)     .6816 (N19238)     .0053 (N19318)   22.3980 (N19324)   22.4050     
+
+(N19508)   22.5130 (N22875)   22.5110 (N22887)   22.5110 (N22891)   22.2280     
+
+(N23012)   25.0000 (N25024)    4.3560 (N25106)    -.5752 (N25113)    -.5752     
+
+(N26817)   22.5130 (N31538)   22.5020 (N31570)   22.3060 (N31582)   21.4440     
+
+(N31586)   21.5390 (N31596)   21.4750 (N31612)   23.1770 (N31616)   23.1760     
+
+(N31632)   22.9250 (N31642)   22.2290 (N31652)   22.2290 (N31658)   22.3550     
+
+(N31686)   22.4830 (N31818)   22.2290 (N32598)    0.0000 (N37427)-52.84E-06     
+
+(X_U3.4)    -.3164 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4        -4.424E-02
+    V_V5        -4.460E-02
+    V_V6        -5.290E-06
+
+    TOTAL POWER DISSIPATION   2.22E+00  WATTS
+
+
+**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R17 =   70    
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)   22.4170  (N17629)  -23.4870 (N17633)    -.6001     
+
+(N17643)  -24.2520 (N17663)  -25.0000 (N17733)   25.0000 (N17751)    -.5752     
+
+(N17779)    4.3565 (N17931)    -.5752 (N18906)   21.7880 (N18912)   21.7880     
+
+(N19018)  -22.3770 (N19072)  -23.0840 (N19086)  -23.0810 (N19166)   23.0740     
+
+(N19210)     .6807 (N19238)     .0051 (N19318)   22.3950 (N19324)   22.4040     
+
+(N19508)   22.5130 (N22875)   22.5110 (N22887)   22.5110 (N22891)   22.2400     
+
+(N23012)   25.0000 (N25024)    4.3560 (N25106)    -.5752 (N25113)    -.5752     
+
+(N26817)   22.5130 (N31538)   22.5140 (N31570)   22.3190 (N31582)   21.4560     
+
+(N31586)   21.5510 (N31596)   21.4880 (N31612)   23.1890 (N31616)   23.1890     
+
+(N31632)   22.9370 (N31642)   22.2420 (N31652)   22.2410 (N31658)   22.3680     
+
+(N31686)   22.4960 (N31818)   22.2420 (N32598)    0.0000 (N37427)-52.84E-06     
+
+(X_U3.4)    -.3164 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4        -4.270E-02
+    V_V5        -4.306E-02
+    V_V6        -5.290E-06
+
+    TOTAL POWER DISSIPATION   2.14E+00  WATTS
+
+
+**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R17 =   90    
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)   22.4230  (N17629)  -23.4870 (N17633)    -.6001     
+
+(N17643)  -24.2520 (N17663)  -25.0000 (N17733)   25.0000 (N17751)    -.5752     
+
+(N17779)    4.3565 (N17931)    -.5752 (N18906)   21.7880 (N18912)   21.7880     
+
+(N19018)  -22.5110 (N19072)  -23.2170 (N19086)  -23.2130 (N19166)   23.2050     
+
+(N19210)     .6798 (N19238)     .0050 (N19318)   22.3940 (N19324)   22.4020     
+
+(N19508)   22.5130 (N22875)   22.5110 (N22887)   22.5110 (N22891)   22.2470     
+
+(N23012)   25.0000 (N25024)    4.3560 (N25106)    -.5752 (N25113)    -.5752     
+
+(N26817)   22.5130 (N31538)   22.5210 (N31570)   22.3250 (N31582)   21.4620     
+
+(N31586)   21.5570 (N31596)   21.4940 (N31612)   23.1950 (N31616)   23.1950     
+
+(N31632)   22.9430 (N31642)   22.2480 (N31652)   22.2470 (N31658)   22.3740     
+
+(N31686)   22.5020 (N31818)   22.2480 (N32598)    0.0000 (N37427)-52.84E-06     
+
+(X_U3.4)    -.3164 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4        -4.138E-02
+    V_V5        -4.173E-02
+    V_V6        -5.290E-06
+
+    TOTAL POWER DISSIPATION   2.08E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     PARAM R17 =   90    
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .27
+

@@ -1,0 +1,158 @@
+
+**** 02/07/19 21:10:24 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\OutputStage\OutputStageSim-PSpiceFiles\SC
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\DevelopProgramFiles\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 200 10 1000k
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source OUTPUTSTAGESIM
+Q_Q1         N00375 N00434 N00382 Q2N5223
+Q_Q2         N00390 N00412 N00394 Q2N5226
+Q_Q3         N00522 N00455 N00448 MPS8599
+Q_Q4         N00547 N00465 N00405 MPS8099
+R_R1         IN N00455  10 TC=0,0 
+R_R2         N00465 IN  10 TC=0,0 
+R_R3         N00448 N00430  51 TC=0,0 
+R_R4         N00522 N00390  10 TC=0,0 
+R_R5         N00547 N00382  10 TC=0,0 
+R_R6         N00405 N00401  51 TC=0,0 
+R_R7         N00434 N00430  10 TC=0,0 
+R_R8         N00401 N00412  10 TC=0,0 
+R_R9         OUT N00382  10 TC=0,0 
+R_R10         N00390 OUT  10 TC=0,0 
+I_I1         N00375 N00430 DC 0.005Adc  
+I_I2         N00401 N00394 DC 0.005Adc  
+V_V1         N00375 0 25Vdc
+V_V2         0 N00394 25Vdc
+V_V3         IN 0 DC 0Vdc AC 0.01Vac 
+
+**** RESUMING bias.cir ****
+.END
+
+**** 02/07/19 21:10:24 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\OutputStage\OutputStageSim-PSpiceFiles\SC
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N5223         Q2N5226         MPS8599         MPS8099         
+               NPN             PNP             PNP             NPN             
+       LEVEL    1               1               1               1            
+          IS   61.010000E-15  650.600000E-18   10.680000E-15    4.872000E-15 
+          BF  309.5           138.8           187.7             9.599000E+03 
+          NF    1               1               1               1            
+         VAF   57.37          115.7           100             100            
+         IKF     .101           1.109            .2203           .1434       
+         ISE   61.010000E-15  111.200000E-15   26.070000E-15   14.650000E-15 
+          NE    1.33            1.856           1.401           1.315        
+          BR     .2094          3.713           1.833           6.935        
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RB   10              10              10              10            
+          RE    0               0               0               0            
+          RC    2.14             .715            .8              .7          
+         CJE    5.928000E-12   19.820000E-12   25.110000E-12   10.490000E-12 
+         VJE     .75             .75             .75             .75         
+         MJE     .3333           .3357           .3626           .4602       
+         CJC    6.072000E-12   14.760000E-12   14.160000E-12    5.805000E-12 
+         VJC     .75             .75             .75             .75         
+         MJC     .3333           .5383           .5585           .4312       
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF  316.400000E-12  761.300000E-12  591.100000E-12  407.000000E-12 
+         XTF    8               1.7            50               2.5          
+         VTF    5               5              12               3            
+         ITF     .2              .65            1.5              .18         
+          TR    1.531000E-06  113.900000E-09  358.600000E-09  565.000000E-12 
+         XTB    1.5             1.5             1.5             1.5          
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.2             2.2             2.42         
+           D     .87             .52             .52             .87         
+
+
+**** 02/07/19 21:10:24 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\OutputStage\OutputStageSim-PSpiceFiles\SC
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)     .1825  (N00375)   25.0000 (N00382)     .2826     
+
+(N00390)     .0823 (N00394)  -25.0000 (N00401)    -.7818 (N00405)    -.6894     
+
+(N00412)    -.7500 (N00430)     .9486 (N00434)     .9482 (N00448)     .6959     
+
+(N00455) 324.6E-06 (N00465)-94.43E-06 (N00522)     .1315 (N00547)     .2646 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.678E-02
+    V_V2        -1.675E-02
+    V_V3         2.302E-05
+
+    TOTAL POWER DISSIPATION   8.38E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 02/07/19 21:10:24 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\OutputStage\OutputStageSim-PSpiceFiles\SC
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

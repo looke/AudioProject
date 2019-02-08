@@ -93,11 +93,18 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice.dsn")
+      (Path "Design Resources"
+         "D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice.dsn"
+         "SCHEMATIC1")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
       (Path "PSpice Resources" "Simulation Profiles")
-      (Select "Design Resources"))
+      (Select "Design Resources"
+         "D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\KCInput_VAS\Pspice\kc_input_vas_spice.dsn"
+         "SCHEMATIC1" "InputStageOnly"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
