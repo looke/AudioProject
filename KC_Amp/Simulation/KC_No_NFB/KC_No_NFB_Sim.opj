@@ -129,8 +129,7 @@
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
       (Path "PSpice Resources" "Simulation Profiles")
-      (Select "PSpice Resources" "Simulation Profiles"
-         "D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schematic1\bias.sim"))
+      (Select "Design Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

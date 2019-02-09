@@ -1,5 +1,5 @@
-
-**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+**** 02/09/19 10:56:28 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
 
@@ -98,7 +98,7 @@ R_R38         N37427 0  10 TC=0,0
 **** RESUMING bias.cir ****
 .END
 
-**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/09/19 10:56:28 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
 
@@ -125,7 +125,7 @@ R_R38         N37427 0  10 TC=0,0
            M     .1575                                       
 
 
-**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/09/19 10:56:28 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
 
@@ -255,7 +255,7 @@ R_R38         N37427 0  10 TC=0,0
            D     .52             .87         
 
 
-**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/09/19 10:56:28 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
 
@@ -287,7 +287,7 @@ R_R38         N37427 0  10 TC=0,0
           KF   34.430000E-18 
 
 
-**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/09/19 10:56:28 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
 
@@ -341,7 +341,7 @@ R_R38         N37427 0  10 TC=0,0
     TOTAL POWER DISSIPATION   2.42E+00  WATTS
 
 
-**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/09/19 10:56:28 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
 
@@ -395,7 +395,7 @@ R_R38         N37427 0  10 TC=0,0
     TOTAL POWER DISSIPATION   2.31E+00  WATTS
 
 
-**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/09/19 10:56:28 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
 
@@ -449,7 +449,7 @@ R_R38         N37427 0  10 TC=0,0
     TOTAL POWER DISSIPATION   2.22E+00  WATTS
 
 
-**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/09/19 10:56:28 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
 
@@ -503,7 +503,7 @@ R_R38         N37427 0  10 TC=0,0
     TOTAL POWER DISSIPATION   2.14E+00  WATTS
 
 
-**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/09/19 10:56:28 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
 
@@ -560,7 +560,7 @@ R_R38         N37427 0  10 TC=0,0
 
           JOB CONCLUDED
 
-**** 02/08/19 15:34:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/09/19 10:56:28 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schem
 
@@ -574,5 +574,5 @@ R_R38         N37427 0  10 TC=0,0
 
 
 
-  Total job time (using Solver 1)   =         .27
+  Total job time (using Solver 1)   =         .25
 
