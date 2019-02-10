@@ -55,6 +55,11 @@
         (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
     (PARAM
       (FullPartName "PARAM.Normal")
       (LibraryName
@@ -78,11 +83,6 @@
       (LibraryName
          "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
-    (C
-      (FullPartName "C.Normal")
-      (LibraryName
-         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
-      (DeviceIndex "0"))
     (L
       (FullPartName "L.Normal")
       (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
@@ -101,9 +101,7 @@
       (Path "Design Resources")
       (Path "Outputs")
       (Path "PSpice Resources")
-      (Path "PSpice Resources" "Simulation Profiles")
-      (Select "PSpice Resources" "Simulation Profiles"
-         "D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\schematic1\bias.sim"))
+      (Path "PSpice Resources" "Simulation Profiles"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

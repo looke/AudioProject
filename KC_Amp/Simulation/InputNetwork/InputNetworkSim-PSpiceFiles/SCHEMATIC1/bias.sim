@@ -25,7 +25,7 @@ Notes=
 @Analysis: 1 1
 +2 0 0
 +0 "100" 
-+1 "10" 
++1 "1" 
 +2 "1000K" 
 +3 "" 
 +4 "" 
@@ -69,7 +69,7 @@ SaveFile 0 ""
 +3 "" 
 +4 "20" 
 +5 "200" 
-+6 "20" 
++6 "50" 
 +7 "" 
 @End Analysis
 @Analysis: 6 0
@@ -116,7 +116,7 @@ SaveFile 0 ""
 +2236960 0
 @End Analysis
 @Analysis: 13 1
-+0 1 1 0
++0 1 1 1
 @End Analysis
 @Analysis: 14 1
 +1 1 1 "*" 

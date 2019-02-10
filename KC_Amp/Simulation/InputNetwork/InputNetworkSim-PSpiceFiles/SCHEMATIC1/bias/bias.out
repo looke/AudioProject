@@ -1,5 +1,5 @@
-
-**** 02/08/19 14:51:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+**** 02/10/19 12:13:36 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\
 
@@ -22,8 +22,8 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.AC DEC 100 10 1000K
-.STEP LIN PARAM R6 20 200 20 
+.AC DEC 100 1 1000K
+.STEP LIN PARAM R6 20 200 50 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
 
@@ -31,19 +31,20 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source INPUTNETWORKSIM
-R_R2         0 N00209  {R2} TC=0,0 
-R_R3         N00209 N00188  {R3} TC=0,0 
-R_R4         N00188 N00202  10 TC=0,0 
+R_R2         0 N01498  {R2} TC=0,0 
+R_R3         N01498 N00188  {R3} TC=0,0 
+R_R4         N00188 OUT  10 TC=0,0 
 C_C1         0 N00188  {C1}  TC=0,0 
-R_R5         0 N00202  {R5} TC=0,0 
+R_R5         0 OUT  {R5} TC=0,0 
 V_V1         N00306 0 DC 0Vdc AC 1Vac 
-R_R6         N00306 N00209  {R6} TC=0,0 
+R_R6         N00306 IN  {R6} TC=0,0 
+C_C2         IN N01498  10u  TC=0,0 
 .PARAM  c1=1n r2=50k r3=400 r5=10k r6=20
 
 **** RESUMING bias.cir ****
 .END
 
-**** 02/08/19 14:51:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/10/19 12:13:36 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\
 
@@ -60,7 +61,9 @@ R_R6         N00306 N00209  {R6} TC=0,0
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00188)    0.0000 (N00202)    0.0000 (N00209)    0.0000 (N00306)    0.0000 
+(   IN)    0.0000  (  OUT)    0.0000  (N00188)    0.0000 (N00306)    0.0000     
+
+(N01498)    0.0000 
 
 
 
@@ -73,14 +76,14 @@ R_R6         N00306 N00209  {R6} TC=0,0
     TOTAL POWER DISSIPATION   0.00E+00  WATTS
 
 
-**** 02/08/19 14:51:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/10/19 12:13:36 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\
 
 
  ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
 
- ****     CURRENT STEP                     PARAM R6 =   40    
+ ****     CURRENT STEP                     PARAM R6 =   70    
 
 
 ******************************************************************************
@@ -90,7 +93,9 @@ R_R6         N00306 N00209  {R6} TC=0,0
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00188)    0.0000 (N00202)    0.0000 (N00209)    0.0000 (N00306)    0.0000 
+(   IN)    0.0000  (  OUT)    0.0000  (N00188)    0.0000 (N00306)    0.0000     
+
+(N01498)    0.0000 
 
 
 
@@ -103,97 +108,7 @@ R_R6         N00306 N00209  {R6} TC=0,0
     TOTAL POWER DISSIPATION   0.00E+00  WATTS
 
 
-**** 02/08/19 14:51:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
-
- ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\
-
-
- ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
-
- ****     CURRENT STEP                     PARAM R6 =   60    
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(N00188)    0.0000 (N00202)    0.0000 (N00209)    0.0000 (N00306)    0.0000 
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_V1         0.000E+00
-
-    TOTAL POWER DISSIPATION   0.00E+00  WATTS
-
-
-**** 02/08/19 14:51:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
-
- ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\
-
-
- ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
-
- ****     CURRENT STEP                     PARAM R6 =   80    
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(N00188)    0.0000 (N00202)    0.0000 (N00209)    0.0000 (N00306)    0.0000 
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_V1         0.000E+00
-
-    TOTAL POWER DISSIPATION   0.00E+00  WATTS
-
-
-**** 02/08/19 14:51:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
-
- ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\
-
-
- ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
-
- ****     CURRENT STEP                     PARAM R6 =  100   
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(N00188)    0.0000 (N00202)    0.0000 (N00209)    0.0000 (N00306)    0.0000 
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_V1         0.000E+00
-
-    TOTAL POWER DISSIPATION   0.00E+00  WATTS
-
-
-**** 02/08/19 14:51:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/10/19 12:13:36 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\
 
@@ -210,7 +125,9 @@ R_R6         N00306 N00209  {R6} TC=0,0
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00188)    0.0000 (N00202)    0.0000 (N00209)    0.0000 (N00306)    0.0000 
+(   IN)    0.0000  (  OUT)    0.0000  (N00188)    0.0000 (N00306)    0.0000     
+
+(N01498)    0.0000 
 
 
 
@@ -223,14 +140,14 @@ R_R6         N00306 N00209  {R6} TC=0,0
     TOTAL POWER DISSIPATION   0.00E+00  WATTS
 
 
-**** 02/08/19 14:51:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/10/19 12:13:36 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\
 
 
  ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
 
- ****     CURRENT STEP                     PARAM R6 =  140   
+ ****     CURRENT STEP                     PARAM R6 =  170   
 
 
 ******************************************************************************
@@ -240,97 +157,9 @@ R_R6         N00306 N00209  {R6} TC=0,0
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00188)    0.0000 (N00202)    0.0000 (N00209)    0.0000 (N00306)    0.0000 
+(   IN)    0.0000  (  OUT)    0.0000  (N00188)    0.0000 (N00306)    0.0000     
 
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_V1         0.000E+00
-
-    TOTAL POWER DISSIPATION   0.00E+00  WATTS
-
-
-**** 02/08/19 14:51:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
-
- ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\
-
-
- ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
-
- ****     CURRENT STEP                     PARAM R6 =  160   
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(N00188)    0.0000 (N00202)    0.0000 (N00209)    0.0000 (N00306)    0.0000 
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_V1         0.000E+00
-
-    TOTAL POWER DISSIPATION   0.00E+00  WATTS
-
-
-**** 02/08/19 14:51:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
-
- ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\
-
-
- ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
-
- ****     CURRENT STEP                     PARAM R6 =  180   
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(N00188)    0.0000 (N00202)    0.0000 (N00209)    0.0000 (N00306)    0.0000 
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_V1         0.000E+00
-
-    TOTAL POWER DISSIPATION   0.00E+00  WATTS
-
-
-**** 02/08/19 14:51:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
-
- ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\
-
-
- ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
-
- ****     CURRENT STEP                     PARAM R6 =  200   
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(N00188)    0.0000 (N00202)    0.0000 (N00209)    0.0000 (N00306)    0.0000 
+(N01498)    0.0000 
 
 
 
@@ -346,19 +175,19 @@ R_R6         N00306 N00209  {R6} TC=0,0
 
           JOB CONCLUDED
 
-**** 02/08/19 14:51:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/10/19 12:13:36 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\InputNetwork\inputnetworksim-pspicefiles\
 
 
  ****     JOB STATISTICS SUMMARY
 
- ****     CURRENT STEP                     PARAM R6 =  200   
+ ****     CURRENT STEP                     PARAM R6 =  170   
 
 
 ******************************************************************************
 
 
 
-  Total job time (using Solver 1)   =         .08
+  Total job time (using Solver 1)   =         .05
 

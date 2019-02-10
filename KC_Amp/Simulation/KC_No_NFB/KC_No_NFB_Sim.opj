@@ -59,24 +59,24 @@
       (ActiveProfile ".\kc_no_nfb_sim-pspicefiles\schematic1\bias.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
-    (PARAM
-      (FullPartName "PARAM.Normal")
-      (LibraryName
-         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
-      (DeviceIndex "0"))
     (0
       (LibraryName
          "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
       (DeviceIndex "0"))
     (C
       (FullPartName "C.Normal")
       (LibraryName
          "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
       (DeviceIndex "0"))
-    (R
-      (FullPartName "R.Normal")
+    (PARAM
+      (FullPartName "PARAM.Normal")
       (LibraryName
-         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
       (DeviceIndex "0"))
     (VAC
       (FullPartName "VAC.Normal")
@@ -129,8 +129,10 @@
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
       (Path "PSpice Resources" "Simulation Profiles")
-      (Select "Design Resources"))
-    (HierarchyView)
+      (Select "PSpice Resources" "Simulation Profiles"
+         "D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\KC_No_NFB\kc_no_nfb_sim-pspicefiles\schematic1\bias.sim"))
+    (HierarchyView
+      (Select "SCHEMATIC1"))
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
@@ -140,8 +142,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 0 797 -8 -30 95 1357 51 621")
-        (Scroll "3132 1077")
-        (Zoom "416")
+        (Scroll "245 913")
+        (Zoom "208")
         (Occurrence "/"))
       (Path
          "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\KC_NO_NFB\KC_NO_NFB_SIM.DSN")
