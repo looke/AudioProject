@@ -61,15 +61,10 @@
         (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
-    (VAC
-      (FullPartName "VAC.Normal")
+    (PARAM
+      (FullPartName "PARAM.Normal")
       (LibraryName
-         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
-    (VSIN
-      (FullPartName "VSIN.Normal")
-      (LibraryName
-         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
       (DeviceIndex "0"))
     (0
       (LibraryName
@@ -79,6 +74,21 @@
       (FullPartName "R.Normal")
       (LibraryName
          "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSRC
+      (FullPartName "VSRC.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VAC
+      (FullPartName "VAC.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "D:\DEVELOPPROGRAMFILES\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
     (VDC
       (FullPartName "VDC.Normal")
@@ -110,27 +120,25 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\VUMeterDriver\vumeterdriver.dsn")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
       (Path "PSpice Resources" "Simulation Profiles")
       (Select "PSpice Resources" "Simulation Profiles"
-         "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\VUMeterDriver\vumeterdriver-pspicefiles\schematic1\bias.sim"))
+         "D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VUMeterDriver\vumeterdriver-pspicefiles\schematic1\bias.sim"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 536"))
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 536"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 100 1366 100 674")
-        (Scroll "-85 0")
-        (Zoom "108")
+        (Placement "44 0 1 -1 -1 -8 -30 -72 1194 46 620")
+        (Scroll "444 660")
+        (Zoom "276")
         (Occurrence "/"))
       (Path
          "D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\VUMETERDRIVER\VUMETERDRIVER.DSN")

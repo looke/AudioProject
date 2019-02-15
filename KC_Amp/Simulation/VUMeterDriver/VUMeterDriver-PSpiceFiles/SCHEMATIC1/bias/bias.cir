@@ -1,4 +1,4 @@
-** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\VUMeterDriver\VUMeterDriver-PSpiceFiles\SCHEMATIC1\bias.sim ] 
+** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VUMeterDriver\vumeterdriver-pspicefiles\schematic1\bias.sim ] 
 
 ** Creating circuit file "bias.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
@@ -12,6 +12,7 @@
 
 *Analysis directives: 
 .AC DEC 200 10 1G
+.STEP PARAM R6 LIST 600,866,1400 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
 

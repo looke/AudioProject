@@ -106,8 +106,9 @@
                 ("device_max_ops")
             )
         )
-        ("VDC")
         ("VAC")
+        ("VSRC")
+        ("Param")
     )
     ("instances"
         ("C1"
@@ -235,28 +236,6 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("V1"
-            ("device_name"	"VDC")
-            ("pspice_path"	"V_V1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"12Vdc")
-                    ("pspice_param"	"DC")
-                )
-            )
-        )
-        ("V2"
-            ("device_name"	"VDC")
-            ("pspice_path"	"V_V2")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"12Vdc")
-                    ("pspice_param"	"DC")
-                )
-            )
-        )
         ("R5"
             ("device_name"	"R")
             ("pspice_path"	"R_R5")
@@ -286,6 +265,64 @@
                 ("ACMAG"
                     ("value"	"0.1Vac")
                     ("pspice_param"	"AC")
+                )
+            )
+        )
+        ("V4"
+            ("device_name"	"VSRC")
+            ("pspice_path"	"V_V4")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"12")
+                    ("pspice_param"	"DC")
+                )
+                ("AC"
+                    ("value"	"0")
+                    ("pspice_param"	"AC")
+                )
+            )
+        )
+        ("V5"
+            ("device_name"	"VSRC")
+            ("pspice_path"	"V_V5")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"12")
+                    ("pspice_param"	"DC")
+                )
+                ("AC"
+                    ("value"	"0")
+                    ("pspice_param"	"AC")
+                )
+            )
+        )
+        ("R6"
+            ("device_name"	"R")
+            ("pspice_path"	"R_R6")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"{R6}")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("PARAM"
+            ("device_name"	"Param")
+            ("pspice_path"	"")
+            ("level"	"0")
+            ("model_params"
+                ("r6"
+                    ("value"	"1000")
+                    ("pspice_param"	"r6")
                 )
             )
         )

@@ -1,7 +1,7 @@
 
-**** 02/07/19 08:24:12 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/13/19 07:28:24 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\VUMeterDriver\VUMeterDriver-PSpiceFiles\S
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VUMeterDriver\vumeterdriver-pspicefiles\s
 
 
  ****     CIRCUIT DESCRIPTION
@@ -24,6 +24,7 @@
 
 *Analysis directives: 
 .AC DEC 200 10 1G
+.STEP PARAM R6 LIST 600,866,1400 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
 
@@ -31,25 +32,27 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source VUMETERDRIVER
-X_U1         N00600 N00477 N00330 N00366 N00397 NE5532 
+X_U1         N00600 N00477 N00332 N00368 OUT NE5532 
 C_C1         0 N00600  0.01n  TC=0,0 
 C_C2         0 N00497  47u  TC=0,0 
-C_C3         N00397 N00426  4.7u  TC=0,0 
-R_R1         N00723 N00600  4750 TC=0,0 
+C_C3         OUT N00426  4.7u  TC=0,0 
+R_R1         IN N00600  4750 TC=0,0 
 R_R2         0 N00600  47k TC=0,0 
 R_R3         N00497 N00477  10k TC=0,0 
-R_R4         N00477 N00397  100k TC=0,0 
-V_V1         N00330 0 12Vdc
-V_V2         0 N00366 12Vdc
+R_R4         N00477 OUT  100k TC=0,0 
 R_R5         0 N00426  500k TC=0,0 
-V_V3         N00723 0 DC 0Vdc AC 0.1Vac 
+V_V3         IN 0 DC 0Vdc AC 0.1Vac 
+V_V4         0 N00368 DC 12 AC 0 
+V_V5         N00332 0 DC 12 AC 0 
+R_R6         0 N00600  {R6} TC=0,0 
+.PARAM  r6=1000
 
 **** RESUMING bias.cir ****
 .END
 
-**** 02/07/19 08:24:12 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/13/19 07:28:24 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\VUMeterDriver\VUMeterDriver-PSpiceFiles\S
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VUMeterDriver\vumeterdriver-pspicefiles\s
 
 
  ****     Diode MODEL PARAMETERS
@@ -64,9 +67,9 @@ V_V3         N00723 0 DC 0Vdc AC 0.1Vac
           IS  800.000000E-18 
 
 
-**** 02/07/19 08:24:12 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/13/19 07:28:24 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\VUMeterDriver\VUMeterDriver-PSpiceFiles\S
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VUMeterDriver\vumeterdriver-pspicefiles\s
 
 
  ****     BJT MODEL PARAMETERS
@@ -102,12 +105,14 @@ V_V3         N00723 0 DC 0Vdc AC 0.1Vac
            D     .87         
 
 
-**** 02/07/19 08:24:12 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/13/19 07:28:24 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\VUMeterDriver\VUMeterDriver-PSpiceFiles\S
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VUMeterDriver\vumeterdriver-pspicefiles\s
 
 
  ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R6 =  600   
 
 
 ******************************************************************************
@@ -117,17 +122,17 @@ V_V3         N00723 0 DC 0Vdc AC 0.1Vac
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00330)   12.0000 (N00366)  -12.0000 (N00397)     .0477 (N00426)    0.0000     
+(   IN)    0.0000  (  OUT)     .0496  (N00332)   12.0000 (N00368)  -12.0000     
 
-(N00477)    -.0021 (N00497)    -.0021 (N00600)    -.0022 (N00723)    0.0000     
+(N00426)    0.0000 (N00477)-256.2E-06 (N00497)-256.2E-06 (N00600)-262.5E-06     
 
-(X_U1.6)-66.00E-06 (X_U1.7)     .0477 (X_U1.8)     .0477 (X_U1.9)    0.0000     
+(X_U1.6)-68.61E-06 (X_U1.7)     .0496 (X_U1.8)     .0496 (X_U1.9)    0.0000     
 
-(X_U1.10)    -.6740                   (X_U1.11)   11.9520                       
+(X_U1.10)    -.6721                   (X_U1.11)   11.9520                       
 
-(X_U1.12)   11.9520                   (X_U1.13)    -.6522                       
+(X_U1.12)   11.9520                   (X_U1.13)    -.6503                       
 
-(X_U1.14)    -.6522                   (X_U1.53)    9.3000                       
+(X_U1.14)    -.6503                   (X_U1.53)    9.3000                       
 
 (X_U1.54)   -9.3000                   (X_U1.90) 498.3E-06                       
 
@@ -141,12 +146,120 @@ V_V3         N00723 0 DC 0Vdc AC 0.1Vac
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_V1        -3.226E-03
-    V_V2        -3.227E-03
-    V_V3        -4.525E-07
-    X_U1.VB     -6.600E-10
-    X_U1.VC      9.253E-12
-    X_U1.VE      9.348E-12
+    V_V3        -5.526E-08
+    V_V4        -3.227E-03
+    V_V5        -3.226E-03
+    X_U1.VB     -6.861E-10
+    X_U1.VC      9.251E-12
+    X_U1.VE      9.350E-12
+    X_U1.VLIM    4.983E-07
+    X_U1.VLP    -3.800E-11
+    X_U1.VLN    -3.800E-11
+
+    TOTAL POWER DISSIPATION   7.74E-02  WATTS
+
+
+**** 02/13/19 07:28:24 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VUMeterDriver\vumeterdriver-pspicefiles\s
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R6 =  866   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)     .0495  (N00332)   12.0000 (N00368)  -12.0000     
+
+(N00426)    0.0000 (N00477)-353.1E-06 (N00497)-353.1E-06 (N00600)-359.4E-06     
+
+(X_U1.6)-68.48E-06 (X_U1.7)     .0495 (X_U1.8)     .0495 (X_U1.9)    0.0000     
+
+(X_U1.10)    -.6722                   (X_U1.11)   11.9520                       
+
+(X_U1.12)   11.9520                   (X_U1.13)    -.6504                       
+
+(X_U1.14)    -.6504                   (X_U1.53)    9.3000                       
+
+(X_U1.54)   -9.3000                   (X_U1.90) 498.3E-06                       
+
+(X_U1.91)   38.0000                   (X_U1.92)  -38.0000                       
+
+(X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -7.566E-08
+    V_V4        -3.227E-03
+    V_V5        -3.226E-03
+    X_U1.VB     -6.848E-10
+    X_U1.VC      9.251E-12
+    X_U1.VE      9.350E-12
+    X_U1.VLIM    4.983E-07
+    X_U1.VLP    -3.800E-11
+    X_U1.VLN    -3.800E-11
+
+    TOTAL POWER DISSIPATION   7.74E-02  WATTS
+
+
+**** 02/13/19 07:28:24 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VUMeterDriver\vumeterdriver-pspicefiles\s
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R6 =    1.4000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)     .0493  (N00332)   12.0000 (N00368)  -12.0000     
+
+(N00426)    0.0000 (N00477)-520.4E-06 (N00497)-520.4E-06 (N00600)-526.7E-06     
+
+(X_U1.6)-68.25E-06 (X_U1.7)     .0493 (X_U1.8)     .0493 (X_U1.9)    0.0000     
+
+(X_U1.10)    -.6724                   (X_U1.11)   11.9520                       
+
+(X_U1.12)   11.9520                   (X_U1.13)    -.6506                       
+
+(X_U1.14)    -.6506                   (X_U1.53)    9.3000                       
+
+(X_U1.54)   -9.3000                   (X_U1.90) 498.3E-06                       
+
+(X_U1.91)   38.0000                   (X_U1.92)  -38.0000                       
+
+(X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -1.109E-07
+    V_V4        -3.227E-03
+    V_V5        -3.226E-03
+    X_U1.VB     -6.825E-10
+    X_U1.VC      9.251E-12
+    X_U1.VE      9.350E-12
     X_U1.VLIM    4.983E-07
     X_U1.VLP    -3.800E-11
     X_U1.VLN    -3.800E-11
@@ -157,17 +270,19 @@ V_V3         N00723 0 DC 0Vdc AC 0.1Vac
 
           JOB CONCLUDED
 
-**** 02/07/19 08:24:12 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+**** 02/13/19 07:28:24 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-bias"  [ D:\DEVELOPWORKSPACE\GITHUB\AUDIOPROJECT\KC_AMP\SIMULATION\VUMeterDriver\VUMeterDriver-PSpiceFiles\S
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DevelopWorkSpace\Github\AudioProject\KC_Amp\Simulation\VUMeterDriver\vumeterdriver-pspicefiles\s
 
 
  ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     PARAM R6 =    1.4000E+03
 
 
 ******************************************************************************
 
 
 
-  Total job time (using Solver 1)   =         .05
+  Total job time (using Solver 1)   =         .13
 
