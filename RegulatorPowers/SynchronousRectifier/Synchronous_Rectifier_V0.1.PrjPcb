@@ -56,7 +56,7 @@ GenerateClassCluster=0
 DocumentUniqueId=VIBDKHOB
 
 [Document2]
-DocumentPath=..\..\..\AltiumDesignerLib\Sync_Rectifier_v0.1.PcbDoc
+DocumentPath=Sync_Rectifier_v0.1.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
