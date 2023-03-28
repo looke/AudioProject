@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=NetC101_1 Pin=C117-1
+Removed Pin From Net: NetName=GND Pin=C117-2
+Removed Pin From Net: NetName=GND Pin=C118-1
+Removed Pin From Net: NetName=NetC102_2 Pin=C118-2
+Removed Member From Class: ClassName=GRLV_double_Rail_v0.3_P2 Member=C117
+Removed Member From Class: ClassName=GRLV_double_Rail_v0.3_P2 Member=C118

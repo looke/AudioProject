@@ -1,0 +1,21 @@
+Change Component Comment : Designator=VR1 Old Comment=100K New Comment=VR-W
+Change Component Comment : Designator=VR2 Old Comment=100K New Comment=VR-W
+Change Component Comment : Designator=VR101 Old Comment=100K New Comment=VR-W
+Change Component Comment : Designator=VR102 Old Comment=100K New Comment=VR-W
+Change Component Comment : Designator=D21 Old Comment=HFA08 New Comment=VS-HFA08TB60-M3
+Change Component Comment : Designator=D22 Old Comment=HFA08 New Comment=VS-HFA08TB60-M3
+Change Component Comment : Designator=D23 Old Comment=HFA08 New Comment=VS-HFA08TB60-M3
+Change Component Comment : Designator=D24 Old Comment=HFA08 New Comment=VS-HFA08TB60-M3
+Change component parameters: Designator = "VR1"; Footprint = "RS 1/2W-VR"; UniqueID = "\SRADULUY"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "VR2"; Footprint = "RS 1/2W-VR"; UniqueID = "\DPBMBQNT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "VR101"; Footprint = "RS 1/2W-VR"; UniqueID = "\FGRBEERU"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "VR102"; Footprint = "RS 1/2W-VR"; UniqueID = "\PLCPYQHD"
+Change component parameters. Clean all parameters for all variants
+Change Class Name : Old Net Name=GRLV_double_Rail_v0.2b_P1 New Net Name=GRLV_double_Rail_v0.3_P1
+Change Class Name : Old Net Name=GRLV_double_Rail_v0.2b_P2 New Net Name=GRLV_double_Rail_v0.3_P2
+Change Room Name: Old Name=GRLV_double_Rail_v0.2b_P2 New Name=GRLV_double_Rail_v0.3_P2
+Change Room Scope: Old Scope=InComponentClass('GRLV_double_Rail_v0.2b_P2') New Scope=InComponentClass('GRLV_double_Rail_v0.3_P2')
+Added Room: Name=GRLV_double_Rail_v0.3_P1
